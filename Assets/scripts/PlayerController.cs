@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MovimentScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public float jumpStrength = 4f;
     public Rigidbody2D myRigidBody;
@@ -33,10 +33,11 @@ public class MovimentScript : MonoBehaviour
             animator.SetTrigger("flew");
         }
 
-        // Verificando se o jogador pulou
+        // Verificando se utilizou o powerUp
         if (Input.GetKeyDown(KeyCode.UpArrow) && isAlive)
         {
-            Vector3 dragonPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            float spriteHalfWidth = GetComponent<SpriteRenderer>().bounds.extents.x + 0.8f;
+            Vector3 dragonPosition = new Vector3(transform.position.x + spriteHalfWidth, transform.position.y, transform.position.z);
             Instantiate(fireball, dragonPosition, Quaternion.Euler(0, 0, 90));
             animator.SetTrigger("triggerFireball");
         }
