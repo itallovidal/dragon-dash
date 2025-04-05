@@ -8,6 +8,7 @@ public class MovimentScript : MonoBehaviour
     LogicManager logicManager;
     bool isAlive = true;
     public Animator animator;
+    float rotationSpeed = 4f;
 
     void Start()
     {
@@ -38,6 +39,14 @@ public class MovimentScript : MonoBehaviour
                 spawnSpeed -= Time.deltaTime * 5;
                 transform.position += Vector3.right * spawnSpeed * Time.deltaTime;
             }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if ( isAlive )
+        {
+            transform.rotation = Quaternion.Euler(0, 0, myRigidBody.linearVelocityY * rotationSpeed);
         }
     }
 
