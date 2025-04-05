@@ -10,6 +10,8 @@ public class MovimentScript : MonoBehaviour
     public Animator animator;
     float rotationSpeed = 4f;
 
+    public GameObject fireball; 
+
     void Start()
     {
         logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
@@ -19,10 +21,24 @@ public class MovimentScript : MonoBehaviour
     void Update()
     {
         spawn();
+        handleMoviment();
+
+    }
+
+    void handleMoviment() {
+        // Verificando se o jogador pulou
         if (Input.GetKeyDown(KeyCode.Space) && isAlive)
         {
             myRigidBody.linearVelocity = Vector2.up * jumpStrength;
             animator.SetTrigger("flew");
+        }
+
+        // Verificando se o jogador pulou
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isAlive)
+        {
+            Vector3 dragonPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+            Instantiate(fireball, dragonPosition, Quaternion.Euler(0, 0, 90));
+            animator.SetTrigger("triggerFireball");
         }
     }
 
