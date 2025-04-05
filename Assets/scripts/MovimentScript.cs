@@ -1,12 +1,13 @@
 using UnityEngine;
 
-public class BirdScript : MonoBehaviour
+public class MovimentScript : MonoBehaviour
 {
     public float jumpStrength = 4f;
     public Rigidbody2D myRigidBody;
     float spawnSpeed = 6f;
     LogicManager logicManager;
     bool isAlive = true;
+    public Animator animator;
 
     void Start()
     {
@@ -17,8 +18,10 @@ public class BirdScript : MonoBehaviour
     void Update()
     {
         spawn();
-        if (Input.GetKeyDown(KeyCode.Space) && isAlive) {
+        if (Input.GetKeyDown(KeyCode.Space) && isAlive)
+        {
             myRigidBody.linearVelocity = Vector2.up * jumpStrength;
+            animator.SetTrigger("flew");
         }
     }
 
@@ -32,7 +35,7 @@ public class BirdScript : MonoBehaviour
         {
             if (spawnSpeed >= 0)
             {
-                spawnSpeed-= Time.deltaTime * 5;
+                spawnSpeed -= Time.deltaTime * 5;
                 transform.position += Vector3.right * spawnSpeed * Time.deltaTime;
             }
         }
