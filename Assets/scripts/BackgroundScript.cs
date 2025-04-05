@@ -5,7 +5,7 @@ public class BackgroundScript : MonoBehaviour
 {
     public float deadZone = 0;
     public float moveSpeed = 2;
-    public float initialSpawn;
+    public float backgroundResetPlace;
 
     void Update()
     {
@@ -17,7 +17,7 @@ public class BackgroundScript : MonoBehaviour
     {
         if (transform.position.x <= (deadZone) * -1)
         {
-            transform.position = new Vector3(initialSpawn, transform.position.y, transform.position.z);
+            transform.position = new Vector3(backgroundResetPlace, transform.position.y, transform.position.z);
         }
     }
 }

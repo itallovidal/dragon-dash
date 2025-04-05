@@ -6,6 +6,7 @@ public class BackgroundSpawnerScript : MonoBehaviour
     public GameObject secondLayerSprite;
     public GameObject thirdLayerSprite;
 
+
     void Start()
     {
         InstantiateBackground(firstLayerSprite, 0.5f);
@@ -23,18 +24,17 @@ public class BackgroundSpawnerScript : MonoBehaviour
         // Pegando metade do tamanho da imagem e o tamanho da câmera para achar o posicionamento
         // correto da segunda imagem e do reposicionamento quando as imagens chegam no limite
         float spriteHalfWidth = layerSprite.GetComponent<SpriteRenderer>().bounds.extents.x;
-        float cameraWidth = Camera.main.transform.position.x +  + Camera.main.orthographicSize * Camera.main.aspect;
+        float cameraWidth = Camera.main.transform.position.x + Camera.main.orthographicSize * Camera.main.aspect;
 
-        Vector3 spawnPosition = new Vector3(cameraWidth + spriteHalfWidth, transform.position.y);
+        Vector3 backgroundResetPlace = new Vector3(cameraWidth + spriteHalfWidth, transform.position.y);
 
-
-        setResetPlace(firstSprite, spawnPosition.x);
+        setResetPlace(firstSprite, backgroundResetPlace.x);
         setBackgroundMovespeed(firstSprite, moveSpeed);
         setDeadZone(firstSprite, cameraWidth + spriteHalfWidth);
 
         //Criando a segunda imagem
-        GameObject secondSprite = Instantiate(layerSprite, spawnPosition, transform.rotation);
-        setResetPlace(secondSprite, spawnPosition.x);
+        GameObject secondSprite = Instantiate(layerSprite, backgroundResetPlace, transform.rotation);
+        setResetPlace(secondSprite, backgroundResetPlace.x);
         setBackgroundMovespeed(secondSprite, moveSpeed);
         setDeadZone(secondSprite, cameraWidth + spriteHalfWidth);
     }
@@ -61,7 +61,7 @@ public class BackgroundSpawnerScript : MonoBehaviour
         bgScript.moveSpeed = speed;
     }
 
-    void setResetPlace(GameObject layerSprite, float initialSpawn)
+    void setResetPlace(GameObject layerSprite, float backgroundResetPlace)
     {
         BackgroundScript bgScript = layerSprite.GetComponent<BackgroundScript>();
 
@@ -70,7 +70,7 @@ public class BackgroundSpawnerScript : MonoBehaviour
             Debug.Log("Ops, esqueceu de vincular o fundo!");
         }
 
-        bgScript.initialSpawn = initialSpawn;
+        bgScript.backgroundResetPlace = backgroundResetPlace;
     }
 
 }
