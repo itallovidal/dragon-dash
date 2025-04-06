@@ -72,4 +72,12 @@ public class PlayerController : MonoBehaviour
         logicManager.GameOver();
         isAlive = false;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.layer == 6)
+        {
+            logicManager.GameOver();
+            isAlive = false;
+        }
+    }
 }
