@@ -8,7 +8,7 @@ public class MovimentScript : MonoBehaviour
     LogicManager logicManager;
     bool isAlive = true;
     public Animator animator;
-    float rotationSpeed = 4f;
+    float rotationSpeed = 2f;
 
     void Start()
     {

@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      unitytut-birdbody_0: -3803887304354961441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

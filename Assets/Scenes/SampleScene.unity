@@ -599,6 +599,7 @@ GameObject:
   - component: {fileID: 1163690605}
   - component: {fileID: 1163690603}
   - component: {fileID: 1163690606}
+  - component: {fileID: 1163690607}
   m_Layer: 3
   m_Name: dragon
   m_TagString: Untagged
@@ -830,6 +831,64 @@ PolygonCollider2D:
       - {x: 0.13709676, y: -0.43548387}
       - {x: 0.25, y: -0.27419353}
   m_UseDelaunayMesh: 0
+--- !u!114 &1163690607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163690599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10dce67b7eb820b42afc09077effb5b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1217734212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1217734214}
+  - component: {fileID: 1217734215}
+  m_Layer: 0
+  m_Name: PowerUpSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1217734214
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217734212}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.8103615, y: 0.028037941, z: -0.05802581}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1217734215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217734212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae1d9f8e44339d4986c8a448134a6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPowerUpSprite: {fileID: 2630817451694047770, guid: 5c7adbb7484d5ea43abad2798bedc7b8, type: 3}
+  secondPowerUpSprite: {fileID: 5756730976254833888, guid: 3873c58fadd711140908c41acfb68c33, type: 3}
 --- !u!1 &1270297904
 GameObject:
   m_ObjectHideFlags: 0
@@ -966,6 +1025,7 @@ GameObject:
   - component: {fileID: 1284363976}
   - component: {fileID: 1284363978}
   - component: {fileID: 1284363977}
+  - component: {fileID: 1284363979}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -1034,6 +1094,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284363975}
   m_CullTransparentMesh: 1
+--- !u!114 &1284363979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284363975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aae1d9f8e44339d4986c8a448134a6ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstPowerUpSprite: {fileID: 0}
+  secondPowerUpSprite: {fileID: 0}
 --- !u!1 &1306693922
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,3 +1314,4 @@ SceneRoots:
   - {fileID: 1271471228}
   - {fileID: 339751242}
   - {fileID: 1163690602}
+  - {fileID: 1217734214}
