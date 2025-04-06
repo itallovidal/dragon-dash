@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: a18f6f32bcea8ca4b8c4d5ad2a141c21
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5657736835891036770
+    second: fire dragon 1_0
+  - first:
+      213: 8570535200877155609
+    second: fire dragon 1_1
+  - first:
+      213: 1418221028381591041
+    second: fire dragon 1_2
+  - first:
+      213: 5438775125007118395
+    second: fire dragon 1_3
+  - first:
+      213: -1083824681508167156
+    second: fire dragon 1_4
+  - first:
+      213: -2541144220769048432
+    second: fire dragon 1_5
+  - first:
+      213: -2960565431177225717
+    second: fire dragon 1_6
+  - first:
+      213: 1778367016623562730
+    second: fire dragon 1_7
+  - first:
+      213: -8838329235213734163
+    second: fire dragon 1_8
+  - first:
+      213: 6110953958424111923
+    second: fire dragon 1_9
+  - first:
+      213: 4723886625353360614
+    second: fire dragon 1_10
+  - first:
+      213: -8306484437680174837
+    second: fire dragon 1_11
+  - first:
+      213: -671081618022836970
+    second: fire dragon 1_12
+  - first:
+      213: 2363285004502561697
+    second: fire dragon 1_13
+  - first:
+      213: 5641017332285365776
+    second: fire dragon 1_14
+  - first:
+      213: -7012683711012304885
+    second: fire dragon 1_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 62
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fire dragon 1_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 520
+        width: 154
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9d7210e25eab71b0800000000000000
+      internalID: -5657736835891036770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_1
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 520
+        width: 155
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91593474b58a0f670800000000000000
+      internalID: 8570535200877155609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_2
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 518
+        width: 153
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1068ca1e2888ea310800000000000000
+      internalID: 1418221028381591041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_3
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 517
+        width: 153
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30b74b09296a7b40800000000000000
+      internalID: 5438775125007118395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_4
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 348
+        width: 141
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02a7ebc13b75f0f0800000000000000
+      internalID: -1083824681508167156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_5
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 355
+        width: 149
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09826067bca0cbcd0800000000000000
+      internalID: -2541144220769048432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_6
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 357
+        width: 154
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a51641d65f9e6d0800000000000000
+      internalID: -2960565431177225717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_7
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 359
+        width: 156
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aef5e1221670ea810800000000000000
+      internalID: 1778367016623562730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_8
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 197
+        width: 155
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deea2275362f75580800000000000000
+      internalID: -8838329235213734163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_9
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 198
+        width: 155
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33be2aa7f387ec450800000000000000
+      internalID: 6110953958424111923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_10
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 196
+        width: 153
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e4e7678bdd9e8140800000000000000
+      internalID: 4723886625353360614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_11
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 195
+        width: 157
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0943cfd96079bc80800000000000000
+      internalID: -8306484437680174837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_12
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 26
+        width: 147
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 615547ee2d6dfa6f0800000000000000
+      internalID: -671081618022836970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_13
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 33
+        width: 153
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3f16cb0331cc020800000000000000
+      internalID: 2363285004502561697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_14
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 35
+        width: 154
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ed0b6506be84e40800000000000000
+      internalID: 5641017332285365776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fire dragon 1_15
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 37
+        width: 156
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0881f2d151fdae90800000000000000
+      internalID: -7012683711012304885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      fire dragon 1_0: -5657736835891036770
+      fire dragon 1_1: 8570535200877155609
+      fire dragon 1_10: 4723886625353360614
+      fire dragon 1_11: -8306484437680174837
+      fire dragon 1_12: -671081618022836970
+      fire dragon 1_13: 2363285004502561697
+      fire dragon 1_14: 5641017332285365776
+      fire dragon 1_15: -7012683711012304885
+      fire dragon 1_2: 1418221028381591041
+      fire dragon 1_3: 5438775125007118395
+      fire dragon 1_4: -1083824681508167156
+      fire dragon 1_5: -2541144220769048432
+      fire dragon 1_6: -2960565431177225717
+      fire dragon 1_7: 1778367016623562730
+      fire dragon 1_8: -8838329235213734163
+      fire dragon 1_9: 6110953958424111923
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
