@@ -13,10 +13,13 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D dragonRigidBody;
     bool isAlive = true;
     DragonPower currentPower = DragonPower.STARNDARD_POWER;
+    public Sprite standardDragonSprite;
+    public Sprite iceDragonSprite;
+    public Sprite fireDragonSprite;
+    public Sprite eletricDragonSprite;
 
- 
     private float dragonSpeed = 6f;
-    // Rotação do dragão em relação a sua velocidade
+    // Rotaï¿½ï¿½o do dragï¿½o em relaï¿½ï¿½o a sua velocidade
     private float dragonRotation = 2f;
     public float jumpStrength = 4f;
 
@@ -24,7 +27,7 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
 
     // GameObjects de Power Up
-    public GameObject fireball; 
+    public GameObject fireball;
     public GameObject iceball;
     public GameObject electricball;
 
@@ -32,6 +35,8 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
+        //animator.enabled = false;
+        GetComponent<SpriteRenderer>().sprite = standardDragonSprite;
     }
 
 
@@ -41,12 +46,12 @@ public class PlayerController : MonoBehaviour
         handleMoviment();
     }
 
-    void handleMoviment() {
+    void handleMoviment()
+    {
         // Verificando se o jogador pulou
         if (Input.GetKeyDown(KeyCode.Space) && isAlive)
         {
-            dragonRigidBody.linearVelocity = Vector2.up * jumpStrength;
-            animator.SetTrigger("flew");
+            handleFly();
         }
 
         // Verificando se utilizou o powerUp
@@ -79,8 +84,8 @@ public class PlayerController : MonoBehaviour
 
     void handleDragonFlySpeed()
     {
-        // Verificando se o dragão já entrou em tela
-        // Se ele estiver fora da tela, a velocidade será maior
+        // Verificando se o dragï¿½o jï¿½ entrou em tela
+        // Se ele estiver fora da tela, a velocidade serï¿½ maior
         if (transform.position.x < -8)
         {
             transform.position += Vector3.right * dragonSpeed * Time.deltaTime;
@@ -98,7 +103,7 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         // Rotacionando baseado na sua velocidade
-        transform.rotation = Quaternion.Euler(0, 0, dragonRigidBody.linearVelocityY * dragonRotation);
+        transform.rotation = Quaternion.Euler(0, 0, dragonRigidBody.linearVelocity.y * dragonRotation);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -113,6 +118,56 @@ public class PlayerController : MonoBehaviour
         {
             logicManager.GameOver();
             isAlive = false;
+        }
+
+        switch (collision.tag)
+        {
+            case "Ice":
+                ChangePower(DragonPower.ICE_POWER, iceDragonSprite, collision.gameObject);
+                break;
+            case "Eletric":
+                ChangePower(DragonPower.ELETRIC_POWER, eletricDragonSprite, collision.gameObject);
+                break;
+            case "Fire":
+                ChangePower(DragonPower.FIRE_POWER, fireDragonSprite, collision.gameObject);
+                break;
+            default:
+                break;
+        }
+    }
+
+    void handleFly()
+    {
+        switch (currentPower)
+        {
+            case DragonPower.ICE_POWER:
+                animator.SetTrigger("flyIceDragon");
+                break;
+            case DragonPower.ELETRIC_POWER:
+                animator.SetTrigger("flyEletricDragon");
+                animator.SetBool("isEletric", true);
+                break;  
+            case DragonPower.FIRE_POWER:
+                animator.SetTrigger("flyFireDragon");
+                break;
+
+            case DragonPower.STARNDARD_POWER:
+                animator.SetTrigger("flyStandardDragon");
+                animator.SetBool("isNoPower", true);
+                break;
+        }
+
+        dragonRigidBody.linearVelocity = Vector2.up * jumpStrength;
+    }
+
+    void ChangePower(DragonPower newPower, Sprite newSprite, GameObject powerUp)
+    {
+        currentPower = newPower;
+        GetComponent<SpriteRenderer>().sprite = newSprite;
+
+        if (powerUp)
+        {
+            Destroy(powerUp);
         }
     }
 }
