@@ -928,15 +928,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragonRigidBody: {fileID: 1163690603}
+  spriteRenderer: {fileID: 1163690601}
   standardDragonSprite: {fileID: -44328603698726018, guid: a652a9f7b40e8794087fa68dd0a59bb0, type: 3}
   iceDragonSprite: {fileID: 239856820114372034, guid: 837306c8aacd65943a471295a6071466, type: 3}
   fireDragonSprite: {fileID: 8570535200877155609, guid: a18f6f32bcea8ca4b8c4d5ad2a141c21, type: 3}
   eletricDragonSprite: {fileID: 6049483495906604578, guid: 66eb36c65c08db848b3e3cd09b80f9fc, type: 3}
-  jumpStrength: 4
   animator: {fileID: 1163690600}
+  idleStandard: {fileID: 7400000, guid: 0978328a862b2db41bd0bbb99f684b55, type: 2}
+  flyStandard: {fileID: 7400000, guid: d61fb2ccdb1b7414f8baba6733206758, type: 2}
+  idleFire: {fileID: 7400000, guid: f6f717cbb644b9941a64acc3da6191d6, type: 2}
+  flyFire: {fileID: 7400000, guid: f6f717cbb644b9941a64acc3da6191d6, type: 2}
+  idleIce: {fileID: 7400000, guid: d4b96139768e62549bdc76aaef5e8ebe, type: 2}
+  flyIce: {fileID: 7400000, guid: aa85c763a4f4f3c44ac09eb9fc79f573, type: 2}
+  idleEletric: {fileID: 7400000, guid: 332b1bd5816d66444a5978047a6d16df, type: 2}
+  flyEletric: {fileID: 7400000, guid: 4f926bb4697f257498e598096e0405ec, type: 2}
   fireball: {fileID: 4862007311518225085, guid: 6fc9c9a06ad7bf94aaf52a108325d872, type: 3}
   iceball: {fileID: 0}
   electricball: {fileID: 0}
+  dragonSpeed: 6
+  dragonRotation: 2
+  jumpStrength: 4
 --- !u!60 &1163690606
 PolygonCollider2D:
   m_ObjectHideFlags: 0

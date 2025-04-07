@@ -7,38 +7,53 @@ public class PlayerController : MonoBehaviour
         FIRE_POWER,
         ICE_POWER,
         ELETRIC_POWER,
-        STARNDARD_POWER
+        STANDARD_POWER
     }
 
+    [Header("Dragão")]
     public Rigidbody2D dragonRigidBody;
-    bool isAlive = true;
-    DragonPower currentPower = DragonPower.STARNDARD_POWER;
+    public SpriteRenderer spriteRenderer;
     public Sprite standardDragonSprite;
     public Sprite iceDragonSprite;
     public Sprite fireDragonSprite;
     public Sprite eletricDragonSprite;
 
-    private float dragonSpeed = 6f;
-    // Rota��o do drag�o em rela��o a sua velocidade
-    private float dragonRotation = 2f;
-    public float jumpStrength = 4f;
-
-    LogicManager logicManager;
+    [Header("Animator")]
     public Animator animator;
+    public AnimationClip idleStandard;
+    public AnimationClip flyStandard;
+    public AnimationClip idleFire;
+    public AnimationClip flyFire;
+    public AnimationClip idleIce;
+    public AnimationClip flyIce;
+    public AnimationClip idleEletric;
+    public AnimationClip flyEletric;
 
-    // GameObjects de Power Up
+    private AnimatorOverrideController animatorOverride;
+
+    [Header("PowerUps")]
     public GameObject fireball;
     public GameObject iceball;
     public GameObject electricball;
+
+    [Header("Outros")]
+    public float dragonSpeed = 6f;
+    public float dragonRotation = 2f;
+    public float jumpStrength = 4f;
+
+    private bool isAlive = true;
+    private DragonPower currentPower = DragonPower.STANDARD_POWER;
+    private LogicManager logicManager;
 
 
     void Start()
     {
         logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
-        //animator.enabled = false;
-        GetComponent<SpriteRenderer>().sprite = standardDragonSprite;
-    }
+        animatorOverride = new AnimatorOverrideController(animator.runtimeAnimatorController);
+        animator.runtimeAnimatorController = animatorOverride;
 
+        ChangePower(DragonPower.STANDARD_POWER);
+    }
 
     void Update()
     {
@@ -48,13 +63,11 @@ public class PlayerController : MonoBehaviour
 
     void handleMoviment()
     {
-        // Verificando se o jogador pulou
         if (Input.GetKeyDown(KeyCode.Space) && isAlive)
         {
             handleFly();
         }
 
-        // Verificando se utilizou o powerUp
         if (Input.GetKeyDown(KeyCode.UpArrow) && isAlive)
         {
             switch (currentPower)
@@ -68,15 +81,19 @@ public class PlayerController : MonoBehaviour
                 case DragonPower.ELETRIC_POWER:
                     attack(electricball, "triggerEletricball");
                     break;
-                default:
-                    break;
             }
         }
     }
 
+    void handleFly()
+    {
+        dragonRigidBody.linearVelocity = Vector2.up * jumpStrength;
+        animator.SetTrigger("fly");
+    }
+
     void attack(GameObject spriteAttack, string animationTriggerName)
     {
-        float spriteHalfWidth = GetComponent<SpriteRenderer>().bounds.extents.x + 0.8f;
+        float spriteHalfWidth = spriteRenderer.bounds.extents.x + 0.8f;
         Vector3 dragonPosition = new Vector3(transform.position.x + spriteHalfWidth, transform.position.y, transform.position.z);
         Instantiate(spriteAttack, dragonPosition, Quaternion.Euler(0, 0, 90));
         animator.SetTrigger(animationTriggerName);
@@ -84,25 +101,19 @@ public class PlayerController : MonoBehaviour
 
     void handleDragonFlySpeed()
     {
-        // Verificando se o drag�o j� entrou em tela
-        // Se ele estiver fora da tela, a velocidade ser� maior
         if (transform.position.x < -8)
         {
             transform.position += Vector3.right * dragonSpeed * Time.deltaTime;
         }
-        else
+        else if (dragonSpeed >= 0)
         {
-            if (dragonSpeed >= 0)
-            {
-                dragonSpeed -= Time.deltaTime * 5;
-                transform.position += Vector3.right * dragonSpeed * Time.deltaTime;
-            }
+            dragonSpeed -= Time.deltaTime * 5;
+            transform.position += Vector3.right * dragonSpeed * Time.deltaTime;
         }
     }
 
     private void FixedUpdate()
     {
-        // Rotacionando baseado na sua velocidade
         transform.rotation = Quaternion.Euler(0, 0, dragonRigidBody.linearVelocity.y * dragonRotation);
     }
 
@@ -123,21 +134,20 @@ public class PlayerController : MonoBehaviour
         switch (collision.tag)
         {
             case "Ice":
-                ChangePower(DragonPower.ICE_POWER, iceDragonSprite, collision.gameObject);
+                ChangePower(DragonPower.ICE_POWER);
                 break;
             case "Eletric":
-                ChangePower(DragonPower.ELETRIC_POWER, eletricDragonSprite, collision.gameObject);
+                ChangePower(DragonPower.ELETRIC_POWER);
                 break;
             case "Fire":
-                ChangePower(DragonPower.FIRE_POWER, fireDragonSprite, collision.gameObject);
-                break;
-            default:
+                ChangePower(DragonPower.FIRE_POWER);
                 break;
         }
     }
 
-    void handleFly()
+    void ChangePower(DragonPower newPower)
     {
+<<<<<<< HEAD
         //switch (currentPower)
         //{
         //    case DragonPower.ICE_POWER:
@@ -194,10 +204,41 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("hasPower", true);
         string power = getPower(newPower);
         animator.SetBool(power, true);
-
-        if (powerUp)
+=======
+        Debug.Log("Trocando power para: " + newPower);
+        foreach (var clip in animator.runtimeAnimatorController.animationClips)
         {
-            Destroy(powerUp);
+            Debug.Log("Nome da animação no Animator: " + clip.name);
+        }
+        
+        currentPower = newPower;
+>>>>>>> b546a9ccc0216320c93970cb0861e0f7391cbc63
+
+        switch (newPower)
+        {
+            case DragonPower.FIRE_POWER:
+                spriteRenderer.sprite = fireDragonSprite;
+                animatorOverride["idleStandard"] = idleFire;
+                animatorOverride["flyStandard"] = flyFire;
+                break;
+
+            case DragonPower.ICE_POWER:
+                spriteRenderer.sprite = iceDragonSprite;
+                animatorOverride["idleStandard"] = idleIce;
+                animatorOverride["flyStandard"] = flyIce;
+                break;
+
+            case DragonPower.ELETRIC_POWER:
+                spriteRenderer.sprite = eletricDragonSprite;
+                animatorOverride["idleStandard"] = idleEletric;
+                animatorOverride["flyStandard"] = flyEletric;
+                break;
+
+            default: // STANDARD_POWER
+                spriteRenderer.sprite = standardDragonSprite;
+                animatorOverride["idle"] = idleStandard;
+                animatorOverride["fly"] = flyStandard;
+                break;
         }
     }
 }
