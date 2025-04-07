@@ -138,32 +138,62 @@ public class PlayerController : MonoBehaviour
 
     void handleFly()
     {
-        switch (currentPower)
-        {
-            case DragonPower.ICE_POWER:
-                animator.SetTrigger("flyIceDragon");
-                break;
-            case DragonPower.ELETRIC_POWER:
-                animator.SetTrigger("flyEletricDragon");
-                animator.SetBool("isEletric", true);
-                break;  
-            case DragonPower.FIRE_POWER:
-                animator.SetTrigger("flyFireDragon");
-                break;
+        //switch (currentPower)
+        //{
+        //    case DragonPower.ICE_POWER:
+        //        break;
+        //    case DragonPower.ELETRIC_POWER:
+        //        animator.SetTrigger("flyEletricDragon");
+        //        animator.SetBool("isEletric", true);
+        //        break;  
+        //    case DragonPower.FIRE_POWER:
+        //        animator.SetTrigger("flyFireDragon");
+        //        break;
 
-            case DragonPower.STARNDARD_POWER:
-                animator.SetTrigger("flyStandardDragon");
-                animator.SetBool("isNoPower", true);
-                break;
-        }
+        //    case DragonPower.STARNDARD_POWER:
+        //        animator.SetTrigger("flyStandardDragon");
+        //        animator.SetBool("isNoPower", true);
+        //        break;
+        //}
 
+        animator.SetTrigger("flew");
         dragonRigidBody.linearVelocity = Vector2.up * jumpStrength;
+    }
+
+    string getPower(DragonPower power)
+    {
+
+        return power switch
+        {
+            DragonPower.FIRE_POWER => "FIRE_POWER",
+            DragonPower.ICE_POWER => "ICE_POWER",
+            DragonPower.ELETRIC_POWER => "ELETRIC_POWER",
+            DragonPower.STARNDARD_POWER => "Standard",
+            _ => "Unknown"
+        };
+    }
+
+    void resetPowers()
+    {
+        animator.SetBool("hasPower", false);
+        animator.SetBool("ELETRIC_POWER", false);
+        animator.SetBool("ICE_POWER", false);
+        animator.SetBool("FIRE_POWER", false);
+
     }
 
     void ChangePower(DragonPower newPower, Sprite newSprite, GameObject powerUp)
     {
+        resetPowers();
         currentPower = newPower;
-        GetComponent<SpriteRenderer>().sprite = newSprite;
+        if(newPower != DragonPower.STARNDARD_POWER)
+        {
+            animator.SetBool("hasPower", false);
+        }
+
+        animator.SetBool("hasPower", true);
+        string power = getPower(newPower);
+        animator.SetBool(power, true);
 
         if (powerUp)
         {

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: idle eletric
+  m_Name: idle fire
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,7 +21,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 6049483495906604578, guid: 66eb36c65c08db848b3e3cd09b80f9fc, type: 3}
+      value: {fileID: 8570535200877155609, guid: a18f6f32bcea8ca4b8c4d5ad2a141c21, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -44,7 +44,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 6049483495906604578, guid: 66eb36c65c08db848b3e3cd09b80f9fc, type: 3}
+    - {fileID: 8570535200877155609, guid: a18f6f32bcea8ca4b8c4d5ad2a141c21, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
