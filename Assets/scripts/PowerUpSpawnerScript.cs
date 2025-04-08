@@ -1,76 +1,85 @@
+using System.Collections;
 using UnityEngine;
 
 public class PowerUpSpawnerScript : MonoBehaviour
 {
-    public GameObject firstPowerUpSprite;
-    public GameObject secondPowerUpSprite;
+    public GameObject[] powerUps;  // Arrasta os PowerUps aqui no Inspector
+    public float minY = -2f;
+    public float maxY = 2f;
+    public float spawnInterval = 5f; // Tempo entre os spawns
+
+    private bool canSpawn = true;
 
     void Start()
     {
-        InstantiatePowerUp(firstPowerUpSprite, 0.5f);
-        InstantiatePowerUp(secondPowerUpSprite, 2f);
+        StartCoroutine(SpawnPowerUpLoop());
     }
 
-    void InstantiatePowerUp(GameObject PowerUpSprite, float moveSpeed)
+    IEnumerator SpawnPowerUpLoop()
     {
-        // Obtendo o centro da câmera para posicionar o PowerUp
-        Vector3 cameraCenterPosition = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0));
-        cameraCenterPosition.z = 0; // Garantir que o objeto esteja no plano correto
+        while (true)
+        {
+            if (canSpawn)
+            {
+                SpawnRandomPowerUp();
+                canSpawn = false;
+                yield return new WaitForSeconds(spawnInterval); // Aguarda o tempo definido antes do próximo spawn
+                canSpawn = true;
+            }
 
-        GameObject firstSprite = Instantiate(PowerUpSprite, cameraCenterPosition, Quaternion.identity);
-
-        // Configurando propriedades do PowerUp
-        float spriteHalfWidth = PowerUpSprite.GetComponent<SpriteRenderer>().bounds.extents.x;
-        float cameraWidth = Camera.main.orthographicSize * Camera.main.aspect;
-
-        Vector3 powerUpResetPlace = new Vector3(cameraWidth + spriteHalfWidth, cameraCenterPosition.y);
-
-        setResetPlace(firstSprite, powerUpResetPlace.x);
-        setPowerUpMovespeed(firstSprite, moveSpeed);
-        setDeadZone(firstSprite, cameraWidth + spriteHalfWidth);
-
-        //Criando a segunda imagem
-        GameObject secondSprite = Instantiate(PowerUpSprite, powerUpResetPlace, transform.rotation);
-        setResetPlace(secondSprite, powerUpResetPlace.x);
-        setPowerUpMovespeed(secondSprite, moveSpeed);
-        setDeadZone(secondSprite, cameraWidth + spriteHalfWidth);
-
-        Debug.Log("PowerUp instanciado na posição: " + cameraCenterPosition);
+            yield return null;
+        }
     }
+
+    void SpawnRandomPowerUp()
+    {
+        Debug.Log("Spawnando PowerUp...");
+        int randomIndex = Random.Range(0, powerUps.Length);
+        GameObject chosenPowerUp = powerUps[randomIndex];
+        Debug.Log($"PowerUp escolhido: {randomIndex}");
+
+        float cameraRightEdge = Camera.main.transform.position.x + Camera.main.orthographicSize * Camera.main.aspect;
+        float spriteHalfWidth = chosenPowerUp.GetComponent<SpriteRenderer>().bounds.extents.x;
+        float randomY = Random.Range(minY, maxY);
+
+        Vector3 spawnPosition = new Vector3(cameraRightEdge + spriteHalfWidth, randomY, 0);
+
+        GameObject instance = Instantiate(chosenPowerUp, spawnPosition, Quaternion.identity);
+
+        setResetPlace(instance, cameraRightEdge + spriteHalfWidth);
+        setPowerUpMovespeed(instance, 0.5f);
+        setDeadZone(instance, cameraRightEdge + spriteHalfWidth);
+    }
+
+    // public void OnPowerUpCollected()
+    // {
+    //     StartCoroutine(HandlePowerUpEffect());
+    // }
+
+    // IEnumerator HandlePowerUpEffect()
+    // {
+    //     Debug.Log("PowerUp ativado!");
+    //     yield return new WaitForSeconds(2f); // Tempo com efeito ativo
+    //     Debug.Log("PowerUp acabou!");
+    //     yield return new WaitForSeconds(2f); // Tempo até o próximo spawn
+    //     canSpawn = true;
+    // }
 
     void setDeadZone(GameObject PowerUpSprite, float deadZone)
     {
-        PowerUpScript powerUpScript = PowerUpSprite.GetComponent<PowerUpScript>();
-        if (powerUpScript == null)
-        {
-            Debug.LogError("O script PowerUpScript não está anexado ao objeto!");
-            return;
-        }
-
-        powerUpScript.deadZone = deadZone;
+        PowerUpScript script = PowerUpSprite.GetComponent<PowerUpScript>();
+        if (script != null) script.deadZone = deadZone;
     }
 
     void setPowerUpMovespeed(GameObject PowerUpSprite, float speed)
     {
-        PowerUpScript powerUpScript = PowerUpSprite.GetComponent<PowerUpScript>();
-        if (powerUpScript == null)
-        {
-            Debug.LogError("O script PowerUpScript não está anexado ao objeto!");
-            return;
-        }
-
-        powerUpScript.moveSpeed = speed;
+        PowerUpScript script = PowerUpSprite.GetComponent<PowerUpScript>();
+        if (script != null) script.moveSpeed = speed;
     }
 
-    void setResetPlace(GameObject PowerUpSprite, float powerUpResetPlace)
+    void setResetPlace(GameObject PowerUpSprite, float resetPlace)
     {
-        PowerUpScript powerUpScript = PowerUpSprite.GetComponent<PowerUpScript>();
-        if (powerUpScript == null)
-        {
-            Debug.LogError("O script PowerUpScript não está anexado ao objeto!");
-            return;
-        }
-
-        powerUpScript.powerUpResetPlace = powerUpResetPlace;
+        PowerUpScript script = PowerUpSprite.GetComponent<PowerUpScript>();
+        if (script != null) script.powerUpResetPlace = resetPlace;
     }
 }

@@ -788,7 +788,6 @@ GameObject:
   - component: {fileID: 1163690605}
   - component: {fileID: 1163690603}
   - component: {fileID: 1163690606}
-  - component: {fileID: 1163690607}
   m_Layer: 3
   m_Name: dragon
   m_TagString: Untagged
@@ -928,7 +927,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragonRigidBody: {fileID: 1163690603}
-  currentPower: 3
+  standardDragonSprite: {fileID: 0}
+  iceDragonSprite: {fileID: 0}
+  fireDragonSprite: {fileID: 0}
+  eletricDragonSprite: {fileID: 0}
   jumpStrength: 4
   animator: {fileID: 1163690600}
   fireball: {fileID: 4862007311518225085, guid: 6fc9c9a06ad7bf94aaf52a108325d872, type: 3}
@@ -1024,18 +1026,6 @@ PolygonCollider2D:
       - {x: 0.13709676, y: -0.43548387}
       - {x: 0.25, y: -0.27419353}
   m_UseDelaunayMesh: 0
---- !u!114 &1163690607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163690599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10dce67b7eb820b42afc09077effb5b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1217734212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,8 +1070,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae1d9f8e44339d4986c8a448134a6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstPowerUpSprite: {fileID: 2630817451694047770, guid: 5c7adbb7484d5ea43abad2798bedc7b8, type: 3}
-  secondPowerUpSprite: {fileID: 5756730976254833888, guid: 3873c58fadd711140908c41acfb68c33, type: 3}
+  powerUps:
+  - {fileID: 5107605849585617565, guid: 27b22f599491b6248b373d5fc151adc0, type: 3}
+  - {fileID: 3181926160433168342, guid: ba2cc8c03ee98d848aa23e22be5dc5e3, type: 3}
+  - {fileID: 1086538180212999954, guid: 389ce217ddc44044aa718a5981c40e93, type: 3}
+  minY: -2
+  maxY: 2
+  spawnInterval: 5
 --- !u!1 &1270297904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,8 +1294,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae1d9f8e44339d4986c8a448134a6ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstPowerUpSprite: {fileID: 0}
-  secondPowerUpSprite: {fileID: 0}
+  powerUps: []
+  minY: -2
+  maxY: 2
+  spawnInterval: 5
 --- !u!1 &1306693922
 GameObject:
   m_ObjectHideFlags: 0
