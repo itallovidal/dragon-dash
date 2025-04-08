@@ -1,8 +1,9 @@
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    enum DragonPower
+    public enum DragonPower
     {
         FIRE_POWER,
         ICE_POWER,
@@ -12,11 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D dragonRigidBody;
     bool isAlive = true;
-    DragonPower currentPower = DragonPower.STARNDARD_POWER;
-    public Sprite standardDragonSprite;
-    public Sprite iceDragonSprite;
-    public Sprite fireDragonSprite;
-    public Sprite eletricDragonSprite;
+    public DragonPower currentPower = DragonPower.STARNDARD_POWER;
 
     private float dragonSpeed = 6f;
     // Rota��o do drag�o em rela��o a sua velocidade
@@ -36,7 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
         //animator.enabled = false;
-        GetComponent<SpriteRenderer>().sprite = standardDragonSprite;
+        ApplyInitialPower();
     }
 
 
@@ -60,13 +57,13 @@ public class PlayerController : MonoBehaviour
             switch (currentPower)
             {
                 case DragonPower.FIRE_POWER:
-                    attack(fireball, "triggerFireball");
+                    attack(fireball);
                     break;
                 case DragonPower.ICE_POWER:
-                    attack(iceball, "triggerIceball");
+                    attack(iceball);
                     break;
                 case DragonPower.ELETRIC_POWER:
-                    attack(electricball, "triggerEletricball");
+                    attack(electricball);
                     break;
                 default:
                     break;
@@ -74,12 +71,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void attack(GameObject spriteAttack, string animationTriggerName)
+    void attack(GameObject spriteAttack)
     {
         float spriteHalfWidth = GetComponent<SpriteRenderer>().bounds.extents.x + 0.8f;
         Vector3 dragonPosition = new Vector3(transform.position.x + spriteHalfWidth, transform.position.y, transform.position.z);
-        Instantiate(spriteAttack, dragonPosition, Quaternion.Euler(0, 0, 90));
-        animator.SetTrigger(animationTriggerName);
+        GameObject element = Instantiate(spriteAttack, dragonPosition, Quaternion.Euler(0, 0, 90));
+        Destroy(element, 3.5f);
     }
 
     void handleDragonFlySpeed()
@@ -123,13 +120,13 @@ public class PlayerController : MonoBehaviour
         switch (collision.tag)
         {
             case "Ice":
-                ChangePower(DragonPower.ICE_POWER, iceDragonSprite, collision.gameObject);
+                ChangePower(DragonPower.ICE_POWER, collision.gameObject);
                 break;
             case "Eletric":
-                ChangePower(DragonPower.ELETRIC_POWER, eletricDragonSprite, collision.gameObject);
+                ChangePower(DragonPower.ELETRIC_POWER, collision.gameObject);
                 break;
             case "Fire":
-                ChangePower(DragonPower.FIRE_POWER, fireDragonSprite, collision.gameObject);
+                ChangePower(DragonPower.FIRE_POWER, collision.gameObject);
                 break;
             default:
                 break;
@@ -182,7 +179,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void ChangePower(DragonPower newPower, Sprite newSprite, GameObject powerUp)
+    void ChangePower(DragonPower newPower, GameObject powerUp)
     {
         resetPowers();
         currentPower = newPower;
@@ -199,5 +196,9 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(powerUp);
         }
+    }
+
+    void ApplyInitialPower() {
+        ChangePower(currentPower, null);
     }
 }
