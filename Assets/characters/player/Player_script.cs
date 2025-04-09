@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public Rigidbody2D dragonRigidBody;
     bool isAlive = true;
-    public DragonPower currentPower = DragonPower.STARNDARD_POWER;
+    public DragonPower currentPower;
 
     private float dragonSpeed = 6f;
     private float dragonRotation = 2f;
@@ -31,8 +31,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
-        //animator.enabled = false;
-        ApplyInitialPower();
+        ChangePower(currentPower);
     }
 
 
@@ -42,12 +41,47 @@ public class PlayerController : MonoBehaviour
         handleMoviment();
     }
 
+
+    private void FixedUpdate()
+    {
+        // Rotacionando baseado na sua velocidade
+        transform.rotation = Quaternion.Euler(0, 0, dragonRigidBody.linearVelocity.y * dragonRotation);
+    }
+
+    // Se ele colidir com qualquer coisa é game over!
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        logicManager.GameOver();
+        isAlive = false;
+    }
+
+    // Se ele colidir com algo que é um trigger, depende do que esse algo é
+    // pode ser uma moeda, um power up ou um score space
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.tag)
+        {
+            case "Ice":
+                ChangePower(DragonPower.ICE_POWER);
+                break;
+            case "Eletric":
+                ChangePower(DragonPower.ELETRIC_POWER);
+                break;
+            case "Fire":
+                ChangePower(DragonPower.FIRE_POWER);
+                break;
+            default:
+                break;
+        }
+    }
+
     void handleMoviment()
     {
         // Verificando se o jogador pulou
         if (Input.GetKeyDown(KeyCode.Space) && isAlive)
         {
-            handleFly();
+            animator.SetTrigger("flew");
+            dragonRigidBody.linearVelocity = Vector2.up * jumpStrength;
         }
 
         // Verificando se utilizou o powerUp
@@ -72,114 +106,55 @@ public class PlayerController : MonoBehaviour
 
     void attack(GameObject spriteAttack)
     {
+        // instanciando o elemento um pouco mais a frente do dragão
         float spriteHalfWidth = GetComponent<SpriteRenderer>().bounds.extents.x + 0.8f;
         Vector3 dragonPosition = new Vector3(transform.position.x + spriteHalfWidth, transform.position.y, transform.position.z);
-        GameObject element = Instantiate(spriteAttack, dragonPosition, Quaternion.Euler(0, 0, 90));
-        Destroy(element, 3.5f);
+        Instantiate(spriteAttack, dragonPosition, Quaternion.Euler(0, 0, 90));
     }
 
     void handleDragonFlySpeed()
     {
-        // Verificando se o drag�o j� entrou em tela
-        // Se ele estiver fora da tela, a velocidade ser� maior
         if (transform.position.x < -8)
         {
             transform.position += Vector3.right * dragonSpeed * Time.deltaTime;
-        }
-        else
-        {
-            if (dragonSpeed >= 0)
-            {
-                dragonSpeed -= Time.deltaTime * 5;
-                transform.position += Vector3.right * dragonSpeed * Time.deltaTime;
-            }
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        // Rotacionando baseado na sua velocidade
-        transform.rotation = Quaternion.Euler(0, 0, dragonRigidBody.linearVelocity.y * dragonRotation);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        logicManager.GameOver();
-        isAlive = false;
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.layer == 6)
-        {
-            logicManager.GameOver();
-            isAlive = false;
+            return;
         }
 
-        switch (collision.tag)
-        {
-            case "Ice":
-                ChangePower(DragonPower.ICE_POWER, collision.gameObject);
-                break;
-            case "Eletric":
-                ChangePower(DragonPower.ELETRIC_POWER, collision.gameObject);
-                break;
-            case "Fire":
-                ChangePower(DragonPower.FIRE_POWER, collision.gameObject);
-                break;
-            default:
-                break;
-        }
+        dragonSpeed = Mathf.Max(0, dragonSpeed - Time.deltaTime * 5);
+        transform.position += Vector3.right * dragonSpeed * Time.deltaTime;
     }
 
-    void handleFly()
+    string getPowerName(DragonPower power)
     {
-        animator.SetTrigger("flew");
-        dragonRigidBody.linearVelocity = Vector2.up * jumpStrength;
-    }
-
-    string getPower(DragonPower power)
-    {
-
         return power switch
         {
             DragonPower.FIRE_POWER => "FIRE_POWER",
             DragonPower.ICE_POWER => "ICE_POWER",
             DragonPower.ELETRIC_POWER => "ELETRIC_POWER",
-            DragonPower.STARNDARD_POWER => "Standard",
-            _ => "Unknown"
+            _ => "_"
         };
     }
 
-    void resetPowers()
+    void resetAnimationState()
     {
         animator.SetBool("hasPower", false);
         animator.SetBool("ELETRIC_POWER", false);
         animator.SetBool("ICE_POWER", false);
         animator.SetBool("FIRE_POWER", false);
-
     }
 
-    void ChangePower(DragonPower newPower, GameObject powerUp)
+    void ChangePower(DragonPower newPower)
     {
-        resetPowers();
+        resetAnimationState();
         currentPower = newPower;
-        if(newPower != DragonPower.STARNDARD_POWER)
+
+        if(newPower == DragonPower.STARNDARD_POWER)
         {
             animator.SetBool("hasPower", false);
+            return;
         }
 
         animator.SetBool("hasPower", true);
-        string power = getPower(newPower);
-        animator.SetBool(power, true);
-
-        if (powerUp)
-        {
-            Destroy(powerUp);
-        }
-    }
-
-    void ApplyInitialPower() {
-        ChangePower(currentPower, null);
+        animator.SetBool(getPowerName(newPower), true);
     }
 }
