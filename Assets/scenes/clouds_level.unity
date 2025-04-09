@@ -788,7 +788,6 @@ GameObject:
   - component: {fileID: 1163690605}
   - component: {fileID: 1163690603}
   - component: {fileID: 1163690606}
-  - component: {fileID: 1163690607}
   m_Layer: 3
   m_Name: dragon
   m_TagString: Untagged
@@ -804,7 +803,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163690599}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 10390d152dc07124986db58ce3c03e15, type: 2}
   m_CullingMode: 0
@@ -932,8 +931,8 @@ MonoBehaviour:
   jumpStrength: 4
   animator: {fileID: 1163690600}
   fireball: {fileID: 4862007311518225085, guid: 6fc9c9a06ad7bf94aaf52a108325d872, type: 3}
-  iceball: {fileID: 0}
-  electricball: {fileID: 0}
+  iceball: {fileID: 4014795953393301030, guid: f86e6d0e14bbd4d4b891fd2588d9c878, type: 3}
+  electricball: {fileID: 2600909964480136427, guid: 323aa6a8a70866f46a29764e1a2cbd1c, type: 3}
 --- !u!60 &1163690606
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -972,7 +971,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.5, y: 1.3709677}
+    oldSize: {x: 2.467742, y: 1.3064516}
     newSize: {x: 1.54, y: 1.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1024,18 +1023,6 @@ PolygonCollider2D:
       - {x: 0.13709676, y: -0.43548387}
       - {x: 0.25, y: -0.27419353}
   m_UseDelaunayMesh: 0
---- !u!114 &1163690607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1163690599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10dce67b7eb820b42afc09077effb5b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1217734212
 GameObject:
   m_ObjectHideFlags: 0
