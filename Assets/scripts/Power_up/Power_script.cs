@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FireballScript : MonoBehaviour
+public class PowerScript : MonoBehaviour
 {
     void Start()
     {
