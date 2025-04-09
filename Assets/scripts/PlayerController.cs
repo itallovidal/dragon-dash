@@ -16,7 +16,6 @@ public class PlayerController : MonoBehaviour
     public DragonPower currentPower = DragonPower.STARNDARD_POWER;
 
     private float dragonSpeed = 6f;
-    // Rota��o do drag�o em rela��o a sua velocidade
     private float dragonRotation = 2f;
     public float jumpStrength = 4f;
 
@@ -135,24 +134,6 @@ public class PlayerController : MonoBehaviour
 
     void handleFly()
     {
-        //switch (currentPower)
-        //{
-        //    case DragonPower.ICE_POWER:
-        //        break;
-        //    case DragonPower.ELETRIC_POWER:
-        //        animator.SetTrigger("flyEletricDragon");
-        //        animator.SetBool("isEletric", true);
-        //        break;  
-        //    case DragonPower.FIRE_POWER:
-        //        animator.SetTrigger("flyFireDragon");
-        //        break;
-
-        //    case DragonPower.STARNDARD_POWER:
-        //        animator.SetTrigger("flyStandardDragon");
-        //        animator.SetBool("isNoPower", true);
-        //        break;
-        //}
-
         animator.SetTrigger("flew");
         dragonRigidBody.linearVelocity = Vector2.up * jumpStrength;
     }
