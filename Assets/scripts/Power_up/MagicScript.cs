@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PowerScript : MonoBehaviour
+public class MagicScript : MonoBehaviour
 {
     void Update()
     {

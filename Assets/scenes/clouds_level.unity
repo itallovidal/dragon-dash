@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 339751242}
   - component: {fileID: 339751241}
   m_Layer: 0
-  m_Name: backgroundSpawner
+  m_Name: BackgroundSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -706,7 +706,7 @@ GameObject:
   - component: {fileID: 1083141943}
   - component: {fileID: 1083141942}
   m_Layer: 0
-  m_Name: Logic Manager
+  m_Name: GameLogic
   m_TagString: Logic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 1163690603}
   - component: {fileID: 1163690606}
   m_Layer: 3
-  m_Name: dragon
+  m_Name: Dragon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1165,7 +1165,7 @@ GameObject:
   - component: {fileID: 1271471228}
   - component: {fileID: 1271471229}
   m_Layer: 0
-  m_Name: pipeSpawner
+  m_Name: PipeSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

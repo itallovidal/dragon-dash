@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class Game_logic : MonoBehaviour
+public class GameLogic : MonoBehaviour
 {
     private int playerScore;
     public Text scoreText;

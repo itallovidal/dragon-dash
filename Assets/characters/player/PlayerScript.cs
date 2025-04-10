@@ -3,7 +3,7 @@ using System.Linq;
 using NUnit.Framework.Constraints;
 using UnityEngine;
 
-public class Player_script : MonoBehaviour
+public class PlayerScript : MonoBehaviour
 {
     public enum DragonPower
     {
@@ -21,7 +21,7 @@ public class Player_script : MonoBehaviour
     private float dragonRotation = 2f;
     public float jumpStrength = 4f;
 
-    Game_logic game_logic;
+    GameLogic gameLogic;
     public Animator animator;
 
     // GameObjects de Power Up
@@ -32,7 +32,7 @@ public class Player_script : MonoBehaviour
 
     void Start()
     {
-        game_logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<Game_logic>();
+        gameLogic = GameObject.FindGameObjectWithTag("Logic").GetComponent<GameLogic>();
         ChangePower(currentPower);
     }
 
@@ -53,7 +53,7 @@ public class Player_script : MonoBehaviour
     // Se ele colidir com qualquer coisa é game over!
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        game_logic.GameOver();
+        gameLogic.GameOver();
         isAlive = false;
     }
 
@@ -85,7 +85,7 @@ public class Player_script : MonoBehaviour
         // Se colidir com o trigger do SceneCollider chame o GameOver
         if (collision.gameObject.layer == 6)
         {
-            game_logic.GameOver();
+            gameLogic.GameOver();
             isAlive = false;
         }
 
