@@ -8,6 +8,8 @@ TagManager:
   - eletric_power_up
   - fire_power_up
   - ice_power_up
+  - ice_magic
+  - eletric_magic
   layers:
   - Default
   - TransparentFX
