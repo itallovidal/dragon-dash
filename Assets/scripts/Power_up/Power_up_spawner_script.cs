@@ -1,85 +1,84 @@
+using System;
 using System.Collections;
+using System.Linq;
+using NUnit.Framework;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class PowerUpSpawnerScript : MonoBehaviour
 {
     public GameObject[] powerUps;  // Arrasta os PowerUps aqui no Inspector
     public float minY = -2f;
     public float maxY = 2f;
-    public float spawnInterval = 40f; // Tempo entre os spawns
+    public float spawnInterval = 5f; 
+    public Boolean isSpawning = true;
 
-    private bool canSpawn = true;
+    private List<GameObject> activePowersUps = new List<GameObject>();
+    private float powerUpMoveSpeed = 10f;
+    private float powerUpDeadZone = 0f;
 
     void Start()
     {
-        StartCoroutine(SpawnPowerUpLoop());
+        // irá invocar a função "SpawnRandomPowerUp" a cada "spawnInterval" segundos
+        InvokeRepeating("SpawnRandomPowerUp", 0f, spawnInterval);
     }
 
-    IEnumerator SpawnPowerUpLoop()
+    private void Update()
     {
-        while (true)
+        if(activePowersUps != null || activePowersUps.Count > 0)
         {
-            if (canSpawn)
+            // esse laço deve ser invertido pois ao retirar 
+            // um elemento da pilha, não devemos mudar a ordem 
+            // dos elementos não afetados
+            for (int i = activePowersUps.Count - 1; i >= 0 ; i--)
             {
-                SpawnRandomPowerUp();
-                canSpawn = false;
-                yield return new WaitForSeconds(spawnInterval); // Aguarda o tempo definido antes do próximo spawn
-                canSpawn = true;
-            }
+                // temos que verificar se o elemento atual
+                // ainda existe ou foi destruído por outra causa
+                if(activePowersUps[i] == null)
+                {
+                    activePowersUps.RemoveAt(i);
+                    continue;
+                }
 
-            yield return null;
+                GameObject activerPowerUp = activePowersUps[i];
+
+                // Com o power up atual da lista, o pegamos e o movemos para a deadzone
+                // Caso ele chegue a deadzone, destruímos esse power up e o removemos da lista
+                activerPowerUp.transform.position += Vector3.left * Time.deltaTime * powerUpMoveSpeed;
+                if (activerPowerUp.transform.position.x <= powerUpDeadZone)
+                {
+                    Destroy(activerPowerUp);
+                    activePowersUps.RemoveAt(i);
+                }
+            }
         }
     }
 
     void SpawnRandomPowerUp()
     {
-        Debug.Log("Spawnando PowerUp...");
-        int randomIndex = Random.Range(0, powerUps.Length);
+        if (!isSpawning) return;
+
+        if (powerUps == null || powerUps.Length == 0)
+        {
+            Debug.Log("Power ups ainda não carregados..");
+            return;
+        }
+
+        // Pegando um power up aleatório
+        int randomIndex = UnityEngine.Random.Range(0, powerUps.Length);
         GameObject chosenPowerUp = powerUps[randomIndex];
-        Debug.Log($"PowerUp escolhido: {randomIndex}");
 
-        float cameraRightEdge = Camera.main.transform.position.x + Camera.main.orthographicSize * Camera.main.aspect;
-        float spriteHalfWidth = chosenPowerUp.GetComponent<SpriteRenderer>().bounds.extents.x;
-        float randomY = Random.Range(minY, maxY);
+        // Definindo variáveis de spawn e despawn
+        float halfCameraWidth = Camera.main.orthographicSize * Camera.main.aspect;
+        float cameraRightEdge = Camera.main.transform.position.x + halfCameraWidth;
+        powerUpDeadZone = Camera.main.transform.position.x - halfCameraWidth;
 
-        Vector3 spawnPosition = new Vector3(cameraRightEdge + spriteHalfWidth, randomY, 0);
+        // Definindo em qual posição iremos spawnar o power up
+        float randomY = UnityEngine.Random.Range(minY, maxY);
+        Vector3 spawnPosition = new Vector3(cameraRightEdge * 1.05f, randomY, 0);
 
-        GameObject instance = Instantiate(chosenPowerUp, spawnPosition, Quaternion.identity);
-
-        setResetPlace(instance, cameraRightEdge + spriteHalfWidth);
-        setPowerUpMovespeed(instance, 0.5f);
-        setDeadZone(instance, cameraRightEdge + spriteHalfWidth);
-    }
-
-    // public void OnPowerUpCollected()
-    // {
-    //     StartCoroutine(HandlePowerUpEffect());
-    // }
-
-    // IEnumerator HandlePowerUpEffect()
-    // {
-    //     Debug.Log("PowerUp ativado!");
-    //     yield return new WaitForSeconds(2f); // Tempo com efeito ativo
-    //     Debug.Log("PowerUp acabou!");
-    //     yield return new WaitForSeconds(2f); // Tempo até o próximo spawn
-    //     canSpawn = true;
-    // }
-
-    void setDeadZone(GameObject PowerUpSprite, float deadZone)
-    {
-        PowerUpScript script = PowerUpSprite.GetComponent<PowerUpScript>();
-        if (script != null) script.deadZone = deadZone;
-    }
-
-    void setPowerUpMovespeed(GameObject PowerUpSprite, float speed)
-    {
-        PowerUpScript script = PowerUpSprite.GetComponent<PowerUpScript>();
-        if (script != null) script.moveSpeed = speed;
-    }
-
-    void setResetPlace(GameObject PowerUpSprite, float resetPlace)
-    {
-        PowerUpScript script = PowerUpSprite.GetComponent<PowerUpScript>();
-        if (script != null) script.powerUpResetPlace = resetPlace;
+        // Spawnando o power up e adicionando na lista de power ups em tela
+        GameObject powerUpInstance = Instantiate(chosenPowerUp, spawnPosition, Quaternion.identity);
+        activePowersUps.Add(powerUpInstance);
     }
 }
