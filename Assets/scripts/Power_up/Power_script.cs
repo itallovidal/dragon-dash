@@ -2,14 +2,8 @@ using UnityEngine;
 
 public class PowerScript : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
-        // Lancando para frente a fireball
         transform.position += Vector3.right * Time.deltaTime * 4f;
     }
 
