@@ -5,9 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Logic
-  - Fire
-  - Eletric
-  - Ice
+  - eletric_power_up
+  - fire_power_up
+  - ice_power_up
   layers:
   - Default
   - TransparentFX

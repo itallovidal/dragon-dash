@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 5689807541764593823}
   - component: {fileID: 6246084837588397004}
   - component: {fileID: 7330008213535076164}
-  - component: {fileID: 880382267475028772}
   m_Layer: 0
   m_Name: powerUpEletric
-  m_TagString: Eletric
+  m_TagString: eletric_power_up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -233,18 +232,3 @@ PolygonCollider2D:
       - {x: -0.41, y: 0.48}
       - {x: -0.41, y: 0.56}
   m_UseDelaunayMesh: 0
---- !u!114 &880382267475028772
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5668150814720368889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d924777180fe704789847b3b7fc43d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadZone: 0
-  moveSpeed: 2
-  powerUpResetPlace: 0

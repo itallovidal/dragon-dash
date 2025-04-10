@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 5133408480148789431}
   - component: {fileID: 5993991924137148191}
   - component: {fileID: 7775785610064258234}
-  - component: {fileID: 4764007237003889147}
   - component: {fileID: 1951756977466686352}
   m_Layer: 0
   m_Name: powerUpIce
-  m_TagString: Ice
+  m_TagString: ice_power_up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,21 +111,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4764007237003889147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 610577640202268217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d924777180fe704789847b3b7fc43d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadZone: 0
-  moveSpeed: 2
-  powerUpResetPlace: 0
 --- !u!60 &1951756977466686352
 PolygonCollider2D:
   m_ObjectHideFlags: 0

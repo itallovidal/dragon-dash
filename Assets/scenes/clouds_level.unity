@@ -427,7 +427,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -803,7 +803,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163690599}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 10390d152dc07124986db58ce3c03e15, type: 2}
   m_CullingMode: 0
@@ -971,7 +971,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.467742, y: 1.3064516}
+    oldSize: {x: 2.5, y: 1.3709677}
     newSize: {x: 1.54, y: 1.21}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1073,7 +1073,8 @@ MonoBehaviour:
   - {fileID: 610577640202268217, guid: ba2cc8c03ee98d848aa23e22be5dc5e3, type: 3}
   minY: -2
   maxY: 2
-  spawnInterval: 40
+  spawnInterval: 5
+  isSpawning: 1
 --- !u!1 &1270297904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,6 +1296,7 @@ MonoBehaviour:
   minY: -2
   maxY: 2
   spawnInterval: 5
+  isSpawning: 1
 --- !u!1 &1306693922
 GameObject:
   m_ObjectHideFlags: 0

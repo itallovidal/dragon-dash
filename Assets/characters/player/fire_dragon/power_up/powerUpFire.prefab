@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 4856144981123612761}
   - component: {fileID: 4942271418117299912}
   - component: {fileID: 6949383554105185527}
-  - component: {fileID: 8838437231384305213}
   m_Layer: 0
   m_Name: powerUpFire
-  m_TagString: Fire
+  m_TagString: fire_power_up
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,18 +182,3 @@ PolygonCollider2D:
       - {x: 0.305, y: 0.505}
       - {x: 0.295, y: 0.505}
   m_UseDelaunayMesh: 0
---- !u!114 &8838437231384305213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3747022692523795215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d924777180fe704789847b3b7fc43d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadZone: 0
-  moveSpeed: 2
-  powerUpResetPlace: 0
