@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class PipeCenterColliderScript : MonoBehaviour
 {
-    LogicManager logicManager;
+    Game_logic game_logic;
 
     void Start()
     {
-        logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
+        game_logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<Game_logic>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.layer == 3)
         {
-            logicManager.AddScore();
+            game_logic.AddScore();
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Linq;
 using NUnit.Framework.Constraints;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Player_script : MonoBehaviour
 {
     public enum DragonPower
     {
@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private float dragonRotation = 2f;
     public float jumpStrength = 4f;
 
-    LogicManager logicManager;
+    Game_logic game_logic;
     public Animator animator;
 
     // GameObjects de Power Up
@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        logicManager = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicManager>();
+        game_logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<Game_logic>();
         ChangePower(currentPower);
     }
 
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
     // Se ele colidir com qualquer coisa é game over!
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        logicManager.GameOver();
+        game_logic.GameOver();
         isAlive = false;
     }
 
@@ -80,6 +80,12 @@ public class PlayerController : MonoBehaviour
         if (tags.Contains(collision.tag))
         {
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.layer == 6)
+        {
+            game_logic.GameOver();
+            isAlive = false;
         }
 
     }
@@ -118,7 +124,10 @@ public class PlayerController : MonoBehaviour
         // instanciando o elemento um pouco mais a frente do dragão
         float spriteHalfWidth = GetComponent<SpriteRenderer>().bounds.extents.x + 0.8f;
         Vector3 dragonPosition = new Vector3(transform.position.x + spriteHalfWidth, transform.position.y, transform.position.z);
-        Instantiate(spriteAttack, dragonPosition, Quaternion.Euler(0, 0, 90));
+        GameObject power = Instantiate(spriteAttack, dragonPosition, Quaternion.Euler(0, 0, 90));
+
+        // Destroi o poder disparado pelo dragao depois de 3.5 segundos
+        Destroy(power, 3.5f);
     }
 
     void handleDragonFlySpeed()

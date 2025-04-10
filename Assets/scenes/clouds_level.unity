@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 104251639}
   - component: {fileID: 104251640}
   m_Layer: 6
-  m_Name: SceneColliderTop
+  m_Name: SceneColliderBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -495,7 +495,7 @@ GameObject:
   - component: {fileID: 536576044}
   - component: {fileID: 536576045}
   m_Layer: 6
-  m_Name: SceneColliderBottom
+  m_Name: SceneColliderTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -770,8 +770,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 104251639}
   - {fileID: 536576044}
+  - {fileID: 104251639}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1163690599
@@ -1211,7 +1211,6 @@ GameObject:
   - component: {fileID: 1284363976}
   - component: {fileID: 1284363978}
   - component: {fileID: 1284363977}
-  - component: {fileID: 1284363979}
   m_Layer: 5
   m_Name: Text (Legacy)
   m_TagString: Untagged
@@ -1280,23 +1279,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284363975}
   m_CullTransparentMesh: 1
---- !u!114 &1284363979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1284363975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aae1d9f8e44339d4986c8a448134a6ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  powerUps: []
-  minY: -2
-  maxY: 2
-  spawnInterval: 5
-  isSpawning: 1
 --- !u!1 &1306693922
 GameObject:
   m_ObjectHideFlags: 0
