@@ -82,6 +82,7 @@ public class Player_script : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
+        // Se colidir com o trigger do SceneCollider chame o GameOver
         if (collision.gameObject.layer == 6)
         {
             game_logic.GameOver();
