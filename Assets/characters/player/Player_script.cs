@@ -1,3 +1,5 @@
+using System;
+using System.Linq;
 using NUnit.Framework.Constraints;
 using UnityEngine;
 
@@ -59,20 +61,27 @@ public class PlayerController : MonoBehaviour
     // pode ser uma moeda, um power up ou um score space
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        string[] tags = { "ice_power_up", "eletric_power_up", "fire_power_up" };
         switch (collision.tag)
         {
-            case "Ice":
+            case "ice_power_up":
                 ChangePower(DragonPower.ICE_POWER);
                 break;
-            case "Eletric":
+            case "eletric_power_up":
                 ChangePower(DragonPower.ELETRIC_POWER);
                 break;
-            case "Fire":
+            case "fire_power_up":
                 ChangePower(DragonPower.FIRE_POWER);
                 break;
             default:
                 break;
         }
+
+        if (tags.Contains(collision.tag))
+        {
+            Destroy(collision.gameObject);
+        }
+
     }
 
     void handleMoviment()
@@ -148,7 +157,7 @@ public class PlayerController : MonoBehaviour
         resetAnimationState();
         currentPower = newPower;
 
-        if(newPower == DragonPower.STARNDARD_POWER)
+        if (newPower == DragonPower.STARNDARD_POWER)
         {
             animator.SetBool("hasPower", false);
             return;
