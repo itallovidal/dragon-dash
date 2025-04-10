@@ -927,7 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragonRigidBody: {fileID: 1163690603}
-  currentPower: 3
+  currentPower: 2
   jumpStrength: 4
   animator: {fileID: 1163690600}
   fireball: {fileID: 4862007311518225085, guid: 6fc9c9a06ad7bf94aaf52a108325d872, type: 3}
