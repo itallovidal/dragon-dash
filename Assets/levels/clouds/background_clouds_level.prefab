@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6147727135951453498}
   - component: {fileID: 4305110312414434077}
-  - component: {fileID: 6146532571723775173}
   m_Layer: 0
   m_Name: background_clouds_level
   m_TagString: Untagged
@@ -88,18 +87,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6146532571723775173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 843379447845604658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 415f92ec02278c842bc1326fe9e1b7b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deadZone: 0
-  moveSpeed: 2
-  initialSpawn: 0
