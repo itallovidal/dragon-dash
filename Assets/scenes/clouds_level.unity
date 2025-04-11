@@ -228,7 +228,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstLayerSprite: {fileID: 843379447845604658, guid: 30f3a85be3f6934498f34489f1440f1d, type: 3}
   secondLayerSprite: {fileID: 2189553253363794280, guid: 614a5f84fd5d43b4c9d6955663923566, type: 3}
-  thirdLayerSprite: {fileID: 0}
+  thirdLayerSprite: {fileID: 1079037760737544316, guid: 72702249a72b8a741a17bb0c652952f0, type: 3}
 --- !u!4 &339751242
 Transform:
   m_ObjectHideFlags: 0

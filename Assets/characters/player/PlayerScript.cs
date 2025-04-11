@@ -103,6 +103,7 @@ public class PlayerScript : MonoBehaviour
         // Verificando se utilizou o powerUp
         if (Input.GetKeyDown(KeyCode.UpArrow) && isAlive)
         {
+            animator.SetTrigger("attack");
             switch (currentPower)
             {
                 case DragonPower.FIRE_POWER:
