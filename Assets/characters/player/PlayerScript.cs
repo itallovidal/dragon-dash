@@ -175,9 +175,16 @@ public class PlayerScript : MonoBehaviour
 
         animator.SetBool("hasPower", true);
         animator.SetBool(getPowerName(newPower), true);
-        Invoke("ResetPowers", 5f);
+
+        if (currentPower != DragonPower.STARNDARD_POWER)
+        {
+            // Redefini as chamadas do Invoke
+            CancelInvoke("ResetPowers");
+            Invoke("ResetPowers", 5f);
+        }
     }
-    void ResetPowers(){
+    void ResetPowers()
+    {
         ChangePower(DragonPower.STARNDARD_POWER);
     }
 }
