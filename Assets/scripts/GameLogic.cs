@@ -18,11 +18,13 @@ public class GameLogic : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name) ;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1f;
     }
 
     public void GameOver()
     {
         gameOverScreen.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
