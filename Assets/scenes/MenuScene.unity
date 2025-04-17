@@ -612,8 +612,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1332203129}
-        m_TargetAssemblyTypeName: MenuManagerScript, Assembly-CSharp
-        m_MethodName: PlayGame
+        m_TargetAssemblyTypeName: GameSceneManagerScript, Assembly-CSharp
+        m_MethodName: MenuPlayGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -751,7 +751,7 @@ GameObject:
   - component: {fileID: 1332203130}
   - component: {fileID: 1332203129}
   m_Layer: 0
-  m_Name: MenuManager
+  m_Name: GameSceneManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -769,7 +769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7e8b3ad165f2a429ab0f912f7dfe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: clouds_level
+  MenuPlaySceneName: LevelScene
 --- !u!4 &1332203130
 Transform:
   m_ObjectHideFlags: 0
