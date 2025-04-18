@@ -1,115 +1,118 @@
 fileFormatVersion: 2
-guid: d6bd244e2331ae946809dba2f7d076c3
+guid: 9ee955f0eab98b34687b55829a1d0e80
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -97013906530739382
-    second: mini buttons (2)_0
+      213: 7253652341725546674
+    second: space_0
   - first:
-      213: 2765687966535889073
-    second: mini buttons (2)_1
+      213: -8640904000706516434
+    second: space_1
   - first:
-      213: -2687911429577828855
-    second: mini buttons (2)_2
+      213: -5416222786248885519
+    second: space_2
   - first:
-      213: -4161062418072748666
-    second: mini buttons (2)_3
+      213: 8515913454031941174
+    second: space_3
   - first:
-      213: 8250738426829829990
-    second: mini buttons (2)_4
+      213: 4882149116565567084
+    second: space_4
   - first:
-      213: -5898717383771762787
-    second: mini buttons (2)_5
+      213: 890426472770691616
+    second: space_5
   - first:
-      213: 1004377263493103387
-    second: mini buttons (2)_6
+      213: -974430472209397013
+    second: space_6
   - first:
-      213: -2208834491712381695
-    second: mini buttons (2)_7
+      213: 3391697891031640757
+    second: space_7
   - first:
-      213: -7270897163820718741
-    second: mini buttons (2)_8
+      213: 4611673593497679581
+    second: space_8
   - first:
-      213: 6179453929736341396
-    second: mini buttons (2)_9
+      213: 5285866453104389021
+    second: space_9
   - first:
-      213: 1931435834510199097
-    second: mini buttons (2)_10
+      213: 4377965126967044060
+    second: space_10
   - first:
-      213: -8801187098514874804
-    second: mini buttons (2)_11
+      213: -5793801899793565772
+    second: space_11
   - first:
-      213: 3373753922089975542
-    second: mini buttons (2)_12
+      213: 5027234458172578886
+    second: space_12
   - first:
-      213: -4823077286363168773
-    second: mini buttons (2)_13
+      213: -3599417956034748360
+    second: space_13
   - first:
-      213: -3775757509922988249
-    second: mini buttons (2)_14
+      213: 6999179517916819572
+    second: space_14
   - first:
-      213: 6249114420570536133
-    second: mini buttons (2)_15
+      213: -2818320699423275279
+    second: space_15
   - first:
-      213: 426594227760890387
-    second: mini buttons (2)_16
+      213: -2876565055270273792
+    second: space_16
   - first:
-      213: 60640901202601271
-    second: mini buttons (2)_17
+      213: 2060692398355397058
+    second: space_17
   - first:
-      213: -7194012298429426564
-    second: mini buttons (2)_18
+      213: -802050846172652321
+    second: space_18
   - first:
-      213: -6810863967362674254
-    second: mini buttons (2)_19
+      213: -451265232722292741
+    second: space_19
   - first:
-      213: 8194512875648410059
-    second: mini buttons (2)_20
+      213: -1936707295978947274
+    second: space_20
   - first:
-      213: 2309109564042920075
-    second: mini buttons (2)_21
+      213: 6369995126443384973
+    second: space_21
   - first:
-      213: 3067244401122049873
-    second: mini buttons (2)_22
+      213: -2841352210591402518
+    second: space_22
   - first:
-      213: -7835630510208083391
-    second: mini buttons (2)_23
+      213: 2184268804980804176
+    second: space_23
   - first:
-      213: -6070476848174917064
-    second: mini buttons (2)_24
+      213: -4236145090596946856
+    second: space_24
   - first:
-      213: -4817899712704240142
-    second: mini buttons (2)_25
+      213: -2626591801943168126
+    second: space_25
   - first:
-      213: 8572611743285719862
-    second: mini buttons (2)_26
+      213: 1495452444243738767
+    second: space_26
   - first:
-      213: 2035109425877689738
-    second: mini buttons (2)_27
+      213: -7611955181837027915
+    second: space_27
   - first:
-      213: -4809296226701768891
-    second: mini buttons (2)_28
+      213: -8249214323962848381
+    second: space_28
   - first:
-      213: 7785070957793659703
-    second: mini buttons (2)_29
+      213: 8258201216608235568
+    second: space_29
   - first:
-      213: 5540297482316487639
-    second: mini buttons (2)_30
+      213: 4324021365472291145
+    second: space_30
   - first:
-      213: -8839219304287760184
-    second: mini buttons (2)_31
+      213: 2611984339426903814
+    second: space_31
   - first:
-      213: 8531341226782270155
-    second: mini buttons (2)_32
+      213: -1595305203960907995
+    second: space_32
   - first:
-      213: -8734827334313295198
-    second: mini buttons (2)_33
+      213: -3843490134261412603
+    second: space_33
   - first:
-      213: -5611343635249365054
-    second: mini buttons (2)_34
+      213: 3893616349395927235
+    second: space_34
   - first:
-      213: -8635753386430770496
-    second: mini buttons (2)_35
+      213: 8490663368855174661
+    second: space_35
+  - first:
+      213: -6832476131597525469
+    second: space_36
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -151,7 +154,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -205,13 +208,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mini buttons (2)_0
+      name: space_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 266
-        width: 79
-        height: 74
+        x: 135
+        y: 967
+        width: 9
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -220,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a4b56f2bd5657aef0800000000000000
-      internalID: -97013906530739382
+      spriteID: 2b84bb09f562aa460800000000000000
+      internalID: 7253652341725546674
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_1
+      name: space_1
       rect:
         serializedVersion: 2
-        x: 114
-        y: 266
-        width: 81
-        height: 74
+        x: 368
+        y: 964
+        width: 11
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +245,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b0b1f46d82b16620800000000000000
-      internalID: 2765687966535889073
+      spriteID: e2ae2a3c797551880800000000000000
+      internalID: -8640904000706516434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_2
+      name: space_2
       rect:
         serializedVersion: 2
-        x: 229
-        y: 266
-        width: 81
-        height: 74
+        x: 780
+        y: 956
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,20 +267,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9061d44cbce92bad0800000000000000
-      internalID: -2687911429577828855
+      spriteID: 1fa32418216b5d4b0800000000000000
+      internalID: -5416222786248885519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_3
+      name: space_3
       rect:
         serializedVersion: 2
-        x: 344
-        y: 266
-        width: 81
-        height: 74
+        x: 928
+        y: 958
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,20 +289,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 68dbb8ae6cfe046c0800000000000000
-      internalID: -4161062418072748666
+      spriteID: 63e2b8dca2a9e2670800000000000000
+      internalID: 8515913454031941174
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_4
+      name: space_4
       rect:
         serializedVersion: 2
-        x: 460
-        y: 266
-        width: 80
-        height: 74
+        x: 204
+        y: 933
+        width: 9
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,20 +311,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6677bd982e2808270800000000000000
-      internalID: 8250738426829829990
+      spriteID: c66b06931c0e0c340800000000000000
+      internalID: 4882149116565567084
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_5
+      name: space_5
       rect:
         serializedVersion: 2
-        x: 575
-        y: 266
-        width: 81
-        height: 74
+        x: 535
+        y: 938
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -330,20 +333,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d9fccddcacb832ea0800000000000000
-      internalID: -5898717383771762787
+      spriteID: 022e918c82e6b5c00800000000000000
+      internalID: 890426472770691616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_6
+      name: space_6
       rect:
         serializedVersion: 2
-        x: 690
-        y: 266
-        width: 81
-        height: 74
+        x: 686
+        y: 944
+        width: 9
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -352,20 +355,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1f3cfabcc340fd00800000000000000
-      internalID: 1004377263493103387
+      spriteID: bea84a5f5a02a72f0800000000000000
+      internalID: -974430472209397013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_7
+      name: space_7
       rect:
         serializedVersion: 2
-        x: 805
-        y: 266
-        width: 81
-        height: 74
+        x: 81
+        y: 930
+        width: 11
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -374,20 +377,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10d5ad19bb4a851e0800000000000000
-      internalID: -2208834491712381695
+      spriteID: 5bae16c034bb11f20800000000000000
+      internalID: 3391697891031640757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_8
+      name: space_8
       rect:
         serializedVersion: 2
-        x: 921
-        y: 266
-        width: 79
-        height: 74
+        x: 278
+        y: 844
+        width: 90
+        height: 87
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -396,20 +399,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6522186d85981b90800000000000000
-      internalID: -7270897163820718741
+      spriteID: dd67a7813b4ffff30800000000000000
+      internalID: 4611673593497679581
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_9
+      name: space_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 177
-        width: 79
-        height: 75
+        x: 450
+        y: 906
+        width: 11
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -418,20 +421,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49783d3eb94d1c550800000000000000
-      internalID: 6179453929736341396
+      spriteID: d9be07b888b2b5940800000000000000
+      internalID: 5285866453104389021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_10
+      name: space_10
       rect:
         serializedVersion: 2
-        x: 114
-        y: 177
-        width: 81
-        height: 75
+        x: 577
+        y: 900
+        width: 22
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,20 +443,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 939c07688a6ddca10800000000000000
-      internalID: 1931435834510199097
+      spriteID: cd72be76618a1cc30800000000000000
+      internalID: 4377965126967044060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_11
+      name: space_11
       rect:
         serializedVersion: 2
-        x: 229
-        y: 177
-        width: 81
-        height: 75
+        x: 750
+        y: 766
+        width: 157
+        height: 161
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -462,20 +465,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c4e154fe6f6ebd580800000000000000
-      internalID: -8801187098514874804
+      spriteID: 4b732d77ed7489fa0800000000000000
+      internalID: -5793801899793565772
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_12
+      name: space_12
       rect:
         serializedVersion: 2
-        x: 344
-        y: 177
-        width: 81
-        height: 75
+        x: 193
+        y: 889
+        width: 12
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -484,20 +487,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fef0c5315bf1de20800000000000000
-      internalID: 3373753922089975542
+      spriteID: 64cdaf1ba1354c540800000000000000
+      internalID: 5027234458172578886
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_13
+      name: space_13
       rect:
         serializedVersion: 2
-        x: 460
-        y: 177
-        width: 80
-        height: 75
+        x: 948
+        y: 892
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -506,20 +509,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bff711603ccf01db0800000000000000
-      internalID: -4823077286363168773
+      spriteID: 830e264807c4c0ec0800000000000000
+      internalID: -3599417956034748360
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_14
+      name: space_14
       rect:
         serializedVersion: 2
-        x: 575
-        y: 177
-        width: 81
-        height: 75
+        x: 99
+        y: 855
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -528,20 +531,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72fd60fac80d99bc0800000000000000
-      internalID: -3775757509922988249
+      spriteID: 4703f9430b4122160800000000000000
+      internalID: 6999179517916819572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_15
+      name: space_15
       rect:
         serializedVersion: 2
-        x: 690
-        y: 177
-        width: 81
-        height: 75
+        x: 595
+        y: 789
+        width: 98
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,20 +553,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5c8b0eec47059b650800000000000000
-      internalID: 6249114420570536133
+      spriteID: 1f6ceb7814053e8d0800000000000000
+      internalID: -2818320699423275279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_16
+      name: space_16
       rect:
         serializedVersion: 2
-        x: 805
-        y: 177
-        width: 81
-        height: 75
+        x: 71
+        y: 766
+        width: 11
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -572,20 +575,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3128be0a0319be500800000000000000
-      internalID: 426594227760890387
+      spriteID: 00d305ba2536418d0800000000000000
+      internalID: -2876565055270273792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_17
+      name: space_17
       rect:
         serializedVersion: 2
-        x: 921
-        y: 177
-        width: 79
-        height: 75
+        x: 95
+        y: 128
+        width: 819
+        height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -594,20 +597,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7356a0f049077d000800000000000000
-      internalID: 60640901202601271
+      spriteID: 2c9325b71dc099c10800000000000000
+      internalID: 2060692398355397058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_18
+      name: space_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 88
-        width: 79
-        height: 75
+        x: 347
+        y: 713
+        width: 199
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -616,20 +619,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c74925a1eebb92c90800000000000000
-      internalID: -7194012298429426564
+      spriteID: fdcd31e310b8ed4f0800000000000000
+      internalID: -802050846172652321
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_19
+      name: space_19
       rect:
         serializedVersion: 2
-        x: 114
-        y: 88
-        width: 81
-        height: 75
+        x: 954
+        y: 777
+        width: 13
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -638,20 +641,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b117d3ae43fa71a0800000000000000
-      internalID: -6810863967362674254
+      spriteID: bff8a1869a8ccb9f0800000000000000
+      internalID: -451265232722292741
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_20
+      name: space_20
       rect:
         serializedVersion: 2
-        x: 229
-        y: 88
-        width: 81
-        height: 75
+        x: 926
+        y: 732
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -660,20 +663,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc163644b02c8b170800000000000000
-      internalID: 8194512875648410059
+      spriteID: 63d7445b9fe6f15e0800000000000000
+      internalID: -1936707295978947274
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_21
+      name: space_21
       rect:
         serializedVersion: 2
-        x: 344
-        y: 88
-        width: 81
-        height: 75
+        x: 931
+        y: 636
+        width: 13
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -682,20 +685,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b804c301aea9b0020800000000000000
-      internalID: 2309109564042920075
+      spriteID: d80a0ac51d4c66850800000000000000
+      internalID: 6369995126443384973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_22
+      name: space_22
       rect:
         serializedVersion: 2
-        x: 460
-        y: 88
-        width: 80
-        height: 75
+        x: 88
+        y: 581
+        width: 11
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -704,20 +707,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 15f7f28288a019a20800000000000000
-      internalID: 3067244401122049873
+      spriteID: ae5bde5f73d7198d0800000000000000
+      internalID: -2841352210591402518
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_23
+      name: space_23
       rect:
         serializedVersion: 2
-        x: 575
-        y: 88
-        width: 81
-        height: 75
+        x: 71
+        y: 536
+        width: 12
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -726,20 +729,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14a95dfd09f324390800000000000000
-      internalID: -7835630510208083391
+      spriteID: 05a09d6c7e4105e10800000000000000
+      internalID: 2184268804980804176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_24
+      name: space_24
       rect:
         serializedVersion: 2
-        x: 690
-        y: 88
-        width: 81
-        height: 75
+        x: 922
+        y: 527
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -748,20 +751,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 83a1d47287551cba0800000000000000
-      internalID: -6070476848174917064
+      spriteID: 85c34f1fb703635c0800000000000000
+      internalID: -4236145090596946856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_25
+      name: space_25
       rect:
         serializedVersion: 2
-        x: 805
-        y: 88
-        width: 81
-        height: 75
+        x: 953
+        y: 408
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -770,20 +773,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2f5aec4dcb1632db0800000000000000
-      internalID: -4817899712704240142
+      spriteID: 28b69332ca87c8bd0800000000000000
+      internalID: -2626591801943168126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_26
+      name: space_26
       rect:
         serializedVersion: 2
-        x: 921
-        y: 88
-        width: 79
-        height: 75
+        x: 71
+        y: 313
+        width: 10
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -792,20 +795,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 63333ebf5f808f670800000000000000
-      internalID: 8572611743285719862
+      spriteID: f8043a5231ae0c410800000000000000
+      internalID: 1495452444243738767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_27
+      name: space_27
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 79
-        height: 74
+        x: 937
+        y: 277
+        width: 9
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -814,20 +817,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a852d788d392e3c10800000000000000
-      internalID: 2035109425877689738
+      spriteID: 5b5f86c8717ec5690800000000000000
+      internalID: -7611955181837027915
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_28
+      name: space_28
       rect:
         serializedVersion: 2
-        x: 114
-        y: 0
-        width: 81
-        height: 74
+        x: 88
+        y: 257
+        width: 12
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -836,20 +839,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54780d30092f14db0800000000000000
-      internalID: -4809296226701768891
+      spriteID: 38b51205747e48d80800000000000000
+      internalID: -8249214323962848381
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_29
+      name: space_29
       rect:
         serializedVersion: 2
-        x: 229
-        y: 0
-        width: 81
-        height: 74
+        x: 342
+        y: 120
+        width: 10
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -858,20 +861,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 73b408ef9c02a0c60800000000000000
-      internalID: 7785070957793659703
+      spriteID: 030f1afa0460b9270800000000000000
+      internalID: 8258201216608235568
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_30
+      name: space_30
       rect:
         serializedVersion: 2
-        x: 344
-        y: 0
-        width: 81
-        height: 74
+        x: 665
+        y: 123
+        width: 10
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -880,20 +883,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7db1777d43713ec40800000000000000
-      internalID: 5540297482316487639
+      spriteID: 949ec22b582020c30800000000000000
+      internalID: 4324021365472291145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_31
+      name: space_31
       rect:
         serializedVersion: 2
-        x: 460
-        y: 0
-        width: 80
-        height: 74
+        x: 737
+        y: 124
+        width: 40
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -902,20 +905,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c0172cffd8c45580800000000000000
-      internalID: -8839219304287760184
+      spriteID: 6078c66fae1af3420800000000000000
+      internalID: 2611984339426903814
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_32
+      name: space_32
       rect:
         serializedVersion: 2
-        x: 575
-        y: 0
-        width: 81
-        height: 74
+        x: 926
+        y: 124
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -924,20 +927,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bc2a00015a9656670800000000000000
-      internalID: 8531341226782270155
+      spriteID: 527f3998e565cd9e0800000000000000
+      internalID: -1595305203960907995
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_33
+      name: space_33
       rect:
         serializedVersion: 2
-        x: 690
-        y: 0
-        width: 81
-        height: 74
+        x: 205
+        y: 80
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -946,20 +949,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2a242eb81d8a7c680800000000000000
-      internalID: -8734827334313295198
+      spriteID: 50d41a9261e29aac0800000000000000
+      internalID: -3843490134261412603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_34
+      name: space_34
       rect:
         serializedVersion: 2
-        x: 805
-        y: 0
-        width: 81
-        height: 74
+        x: 424
+        y: 73
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -968,20 +971,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2cfff44a1b08022b0800000000000000
-      internalID: -5611343635249365054
+      spriteID: 3c0c565c077e80630800000000000000
+      internalID: 3893616349395927235
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mini buttons (2)_35
+      name: space_35
       rect:
         serializedVersion: 2
-        x: 921
-        y: 0
-        width: 79
-        height: 74
+        x: 579
+        y: 76
+        width: 12
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -990,8 +993,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c2dae99c04a72880800000000000000
-      internalID: -8635753386430770496
+      spriteID: 50eb8083955e4d570800000000000000
+      internalID: 8490663368855174661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space_36
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 72
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e5bc7882b2e21a0800000000000000
+      internalID: -6832476131597525469
       vertices: []
       indices: 
       edges: []
@@ -1000,7 +1025,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -1010,42 +1035,43 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      mini buttons (2)_0: -97013906530739382
-      mini buttons (2)_1: 2765687966535889073
-      mini buttons (2)_10: 1931435834510199097
-      mini buttons (2)_11: -8801187098514874804
-      mini buttons (2)_12: 3373753922089975542
-      mini buttons (2)_13: -4823077286363168773
-      mini buttons (2)_14: -3775757509922988249
-      mini buttons (2)_15: 6249114420570536133
-      mini buttons (2)_16: 426594227760890387
-      mini buttons (2)_17: 60640901202601271
-      mini buttons (2)_18: -7194012298429426564
-      mini buttons (2)_19: -6810863967362674254
-      mini buttons (2)_2: -2687911429577828855
-      mini buttons (2)_20: 8194512875648410059
-      mini buttons (2)_21: 2309109564042920075
-      mini buttons (2)_22: 3067244401122049873
-      mini buttons (2)_23: -7835630510208083391
-      mini buttons (2)_24: -6070476848174917064
-      mini buttons (2)_25: -4817899712704240142
-      mini buttons (2)_26: 8572611743285719862
-      mini buttons (2)_27: 2035109425877689738
-      mini buttons (2)_28: -4809296226701768891
-      mini buttons (2)_29: 7785070957793659703
-      mini buttons (2)_3: -4161062418072748666
-      mini buttons (2)_30: 5540297482316487639
-      mini buttons (2)_31: -8839219304287760184
-      mini buttons (2)_32: 8531341226782270155
-      mini buttons (2)_33: -8734827334313295198
-      mini buttons (2)_34: -5611343635249365054
-      mini buttons (2)_35: -8635753386430770496
-      mini buttons (2)_4: 8250738426829829990
-      mini buttons (2)_5: -5898717383771762787
-      mini buttons (2)_6: 1004377263493103387
-      mini buttons (2)_7: -2208834491712381695
-      mini buttons (2)_8: -7270897163820718741
-      mini buttons (2)_9: 6179453929736341396
+      space_0: 7253652341725546674
+      space_1: -8640904000706516434
+      space_10: 4377965126967044060
+      space_11: -5793801899793565772
+      space_12: 5027234458172578886
+      space_13: -3599417956034748360
+      space_14: 6999179517916819572
+      space_15: -2818320699423275279
+      space_16: -2876565055270273792
+      space_17: 2060692398355397058
+      space_18: -802050846172652321
+      space_19: -451265232722292741
+      space_2: -5416222786248885519
+      space_20: -1936707295978947274
+      space_21: 6369995126443384973
+      space_22: -2841352210591402518
+      space_23: 2184268804980804176
+      space_24: -4236145090596946856
+      space_25: -2626591801943168126
+      space_26: 1495452444243738767
+      space_27: -7611955181837027915
+      space_28: -8249214323962848381
+      space_29: 8258201216608235568
+      space_3: 8515913454031941174
+      space_30: 4324021365472291145
+      space_31: 2611984339426903814
+      space_32: -1595305203960907995
+      space_33: -3843490134261412603
+      space_34: 3893616349395927235
+      space_35: 8490663368855174661
+      space_36: -6832476131597525469
+      space_4: 4882149116565567084
+      space_5: 890426472770691616
+      space_6: -974430472209397013
+      space_7: 3391697891031640757
+      space_8: 4611673593497679581
+      space_9: 5285866453104389021
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

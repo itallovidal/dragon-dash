@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 914dd011409c47a4eaa6455f953b845e
+guid: 1b4ef8d06224bd64fb37f54ca854bece
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -523873882963919125
-    second: buttons (2)_0
-  - first:
-      213: -1156816534566835907
-    second: buttons (2)_1
-  - first:
-      213: -4771639675586012169
-    second: buttons (2)_2
-  - first:
-      213: 4160265907179223963
-    second: buttons (2)_3
-  - first:
-      213: -3185767385113347440
-    second: buttons (2)_4
+      213: -708262033363141403
+    second: florest_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -112,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: buttons (2)_0
+      name: florest_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1201
-        width: 1000
-        height: 283
+        x: 139
+        y: 154
+        width: 768
+        height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,96 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: beeb4d2aa73dab8f0800000000000000
-      internalID: -523873882963919125
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons (2)_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 901
-        width: 1000
-        height: 284
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3968daad7922ffe0800000000000000
-      internalID: -1156816534566835907
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons (2)_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 600
-        width: 1000
-        height: 284
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7fb198c0ffab7cdb0800000000000000
-      internalID: -4771639675586012169
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons (2)_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 299
-        width: 1000
-        height: 284
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9bf590fccb3cb930800000000000000
-      internalID: 4160265907179223963
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: buttons (2)_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1000
-        height: 283
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 09a3b413171e9c3d0800000000000000
-      internalID: -3185767385113347440
+      spriteID: 5ec7e75ee6fbb26f0800000000000000
+      internalID: -708262033363141403
       vertices: []
       indices: 
       edges: []
@@ -225,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -235,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      buttons (2)_0: -523873882963919125
-      buttons (2)_1: -1156816534566835907
-      buttons (2)_2: -4771639675586012169
-      buttons (2)_3: 4160265907179223963
-      buttons (2)_4: -3185767385113347440
+      florest_0: -708262033363141403
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

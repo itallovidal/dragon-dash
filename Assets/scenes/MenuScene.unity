@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 838729098}
   - component: {fileID: 838729097}
   m_Layer: 5
-  m_Name: BtnJogar
+  m_Name: BtnPlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -613,11 +613,11 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1332203129}
         m_TargetAssemblyTypeName: GameSceneManagerScript, Assembly-CSharp
-        m_MethodName: MenuPlayGame
-        m_Mode: 1
+        m_MethodName: LoadScene
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 102900000, guid: 46840decd6cbe3e44a6cecd98496e0fb, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEditor.SceneAsset, UnityEditor.CoreModule
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -769,7 +769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7e8b3ad165f2a429ab0f912f7dfe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuPlaySceneName: LevelScene
 --- !u!4 &1332203130
 Transform:
   m_ObjectHideFlags: 0
@@ -797,7 +796,7 @@ GameObject:
   - component: {fileID: 1653229244}
   - component: {fileID: 1653229243}
   m_Layer: 5
-  m_Name: Nome do jogo
+  m_Name: DragonDash
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -934,7 +933,7 @@ GameObject:
   - component: {fileID: 1819474086}
   - component: {fileID: 1819474085}
   m_Layer: 5
-  m_Name: BtnSair
+  m_Name: BtnExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
