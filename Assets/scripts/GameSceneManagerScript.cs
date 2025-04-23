@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class GameSceneManagerScript : MonoBehaviour
 {
     public GameObject levelDescription;
+    public GameObject[] level;
     private Dictionary<string, string> descriptionHashmap = new Dictionary<string, string>
     {
         { "cloud_level", "Batalhe entre as nuvens contra inimigos desafiadores em 'Altas Nuvens'" },
@@ -16,6 +18,57 @@ public class GameSceneManagerScript : MonoBehaviour
 
     private string chosenLevel = "cloud_level";
 
+    private bool isMovingUp = true;
+    private float floatDistance = 0.5f;
+    private float topLimit;
+    private float bottomLimit;
+
+    private void Start()
+    {
+        float startY = level[0].transform.position.y;
+        topLimit = startY + floatDistance / 2f;
+        bottomLimit = startY - floatDistance / 2f;
+    }
+
+    private void Update()
+    {
+        MoveLevel();
+    }
+
+    public void MoveLevel()
+    {
+        if(level == null)
+        {
+            Debug.Log("Level is null");
+            return;
+        }
+
+        for(int i = 0; i < level.Length; i++)
+        {
+            if (level[i] == null)
+            {
+                Debug.Log("Level " + i + " is null");
+                return;
+            }
+
+            if (level[i].gameObject.tag != chosenLevel) {
+                continue;
+            }
+
+            float direction = isMovingUp ? 1f : -1f;
+            Vector3 move = new Vector3(0f, direction * Time.deltaTime * .25f, 0f);
+            level[i].transform.position += move;
+
+            if (level[i].transform.position.y >= topLimit)
+            {
+                isMovingUp = false;
+            }
+            else if (level[i].transform.position.y <= bottomLimit)
+            {
+                isMovingUp = true;
+            }
+        }
+    }
 
     public void StartLevel()
     {
