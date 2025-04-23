@@ -14,6 +14,9 @@ TagManager:
   - enemy_power
   - fire_magic
   - pipe
+  - cloud_level
+  - forest_level
+  - space_level
   layers:
   - Default
   - TransparentFX
