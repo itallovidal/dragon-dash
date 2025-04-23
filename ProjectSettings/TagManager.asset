@@ -10,6 +10,10 @@ TagManager:
   - ice_power_up
   - ice_magic
   - eletric_magic
+  - enemy
+  - enemy_power
+  - fire_magic
+  - pipe
   layers:
   - Default
   - TransparentFX

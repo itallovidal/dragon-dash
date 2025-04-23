@@ -695,6 +695,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704447971}
   m_CullTransparentMesh: 1
+--- !u!1 &764141723
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 764141725}
+  - component: {fileID: 764141724}
+  m_Layer: 0
+  m_Name: EnemySpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &764141724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764141723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aceda8352cce214aa7f754cfca1a45d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 2095911637731100945, guid: 6362e0ab3a8108948a6cc2818a8c9111, type: 3}
+  minY: -2
+  maxY: 2
+  spawnInterval: 5
+  isSpawning: 1
+--- !u!4 &764141725
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764141723}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.02, y: 0.03, z: -0.05802581}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1083141941
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,7 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragonRigidBody: {fileID: 1163690603}
-  currentPower: 3
+  currentPower: 0
   jumpStrength: 4
   animator: {fileID: 1163690600}
   fireball: {fileID: 4862007311518225085, guid: 6fc9c9a06ad7bf94aaf52a108325d872, type: 3}
@@ -1487,3 +1536,4 @@ SceneRoots:
   - {fileID: 1163690602}
   - {fileID: 1217734214}
   - {fileID: 1102101776}
+  - {fileID: 764141725}
