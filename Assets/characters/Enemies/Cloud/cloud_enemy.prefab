@@ -172,3 +172,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPower: {fileID: 2600909964480136427, guid: 323aa6a8a70866f46a29764e1a2cbd1c, type: 3}
   attackInterval: 2
+  explosionPrefab: {fileID: 7184945175458221136, guid: 9d037f8e843fefc2da92a2032d7d0d01, type: 3}
