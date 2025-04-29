@@ -17,6 +17,7 @@ TagManager:
   - cloud_level
   - forest_level
   - space_level
+  - explosion_death
   layers:
   - Default
   - TransparentFX

@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ativo 5_0: -7056585652792655146
+      Ativo 5_1: 6101329233653793633
+      Ativo 5_2: -1652926599574034773
+      Ativo 5_3: -2335283274144077587
+      Ativo 5_4: -2859297261470089286
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
