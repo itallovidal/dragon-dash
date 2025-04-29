@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class EnemyLogic : MonoBehaviour
 {
-    bool isAlive = true;
+    // bool isAlive = true;
     public GameObject enemyPower;
     public float attackInterval = 2f;
+    public GameObject explosionPrefab;
 
     private void Start()
     {
@@ -13,7 +14,7 @@ public class EnemyLogic : MonoBehaviour
 
     void Attack()
     {
-        // instanciando o elemento um pouco mais a frente do drag�o
+        // instanciando o elemento um pouco mais a frente do drag�o
         float spriteHalfWidth = GetComponent<SpriteRenderer>().bounds.extents.x + 0.8f;
         Vector3 powerPositon = new Vector3(transform.position.x - spriteHalfWidth, transform.position.y, transform.position.z);
         GameObject power = Instantiate(enemyPower, powerPositon, Quaternion.Euler(0, 0, 90));
@@ -31,8 +32,18 @@ public class EnemyLogic : MonoBehaviour
             case "fire_magic":
             case "ice_magic":
             case "eletric_magic":
+                TriggerDeathAnimation();
                 Destroy(gameObject);
                 break;
+        }
+    }
+
+    void TriggerDeathAnimation()
+    {
+        if (explosionPrefab != null)
+        {
+            // Instancia o prefab de explosão na posição do inimigo
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         }
     }
 }
