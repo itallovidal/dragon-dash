@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class ExplosionScript : MonoBehaviour
+public class EnemyDeathScript : MonoBehaviour
 {
-    public Animator animator;
-
     private void Update()
     {
         Animator animator = GetComponent<Animator>();

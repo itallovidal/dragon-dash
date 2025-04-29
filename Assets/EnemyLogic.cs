@@ -5,7 +5,7 @@ public class EnemyLogic : MonoBehaviour
     // bool isAlive = true;
     public GameObject enemyPower;
     public float attackInterval = 2f;
-    public GameObject explosionPrefab;
+    public GameObject enemyDeathPrefab;
 
     private void Start()
     {
@@ -40,10 +40,10 @@ public class EnemyLogic : MonoBehaviour
 
     void TriggerDeathAnimation()
     {
-        if (explosionPrefab != null)
+        if (enemyDeathPrefab != null)
         {
             // Instancia o prefab de explosão na posição do inimigo
-            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            GameObject explosion = Instantiate(enemyDeathPrefab, transform.position, Quaternion.identity);
         }
     }
 }
