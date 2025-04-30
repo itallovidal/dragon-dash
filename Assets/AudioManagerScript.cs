@@ -5,7 +5,7 @@ public class AudioManagerScript : MonoBehaviour
 {
     public static AudioManagerScript instance;
 
-    private AudioSource audioSource;
+    public AudioSource audioSource;
 
     private string[] scenesWithMusic = { "LevelScene", "MenuScene" };
 

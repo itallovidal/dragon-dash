@@ -1,19 +1,25 @@
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameSceneManagerScript : MonoBehaviour
 {
+    private AudioManagerScript audioManager;
+    public Sprite[] btnMuteSprites;
+    public Button buttonMute;
+
     public GameObject levelDescription;
     public GameObject[] level;
     private Dictionary<string, string> descriptionHashmap = new Dictionary<string, string>
     {
         { "cloud_level", "Batalhe entre as nuvens contra inimigos desafiadores em 'Altas Nuvens'" },
         { "forest_level", "Corra pela floresta e enfrente os desafios da selva em 'Savana Selvagem'" },
-        { "space_level", "Desafie a gravidade e sobreviva ao caos do universo em 'Entre Estrelas'." }
+        { "space_level", "Desafie a gravidade e sobreviva ao caos do universo em 'Entre Estrelas'" }
     };
 
     private string chosenLevel = "cloud_level";
@@ -30,6 +36,15 @@ public class GameSceneManagerScript : MonoBehaviour
         bottomLimit = startY - floatDistance / 2f;
     }
 
+    private void Awake()
+    {
+        audioManager = AudioManagerScript.instance;
+        if (audioManager == null)
+        {
+            Debug.LogWarning("AudioManager não encontrado na cena!");
+        }
+    }
+
     private void Update()
     {
         MoveLevel();
@@ -37,13 +52,13 @@ public class GameSceneManagerScript : MonoBehaviour
 
     public void MoveLevel()
     {
-        if(level == null)
+        if (level == null)
         {
             Debug.Log("Level is null");
             return;
         }
 
-        for(int i = 0; i < level.Length; i++)
+        for (int i = 0; i < level.Length; i++)
         {
             if (level[i] == null)
             {
@@ -51,7 +66,8 @@ public class GameSceneManagerScript : MonoBehaviour
                 return;
             }
 
-            if (level[i].gameObject.tag != chosenLevel) {
+            if (level[i].gameObject.tag != chosenLevel)
+            {
                 continue;
             }
 
@@ -72,7 +88,7 @@ public class GameSceneManagerScript : MonoBehaviour
 
     public void StartLevel()
     {
-        if(chosenLevel == null)
+        if (chosenLevel == null)
         {
             return;
         }
@@ -97,7 +113,7 @@ public class GameSceneManagerScript : MonoBehaviour
 
         Debug.Log(elClicked.gameObject.tag);
 
-        if(levelDescription == null)
+        if (levelDescription == null)
         {
             Debug.Log("Level Description is null");
             return;
@@ -107,7 +123,29 @@ public class GameSceneManagerScript : MonoBehaviour
         chosenLevel = elClicked.gameObject.tag;
     }
 
-    public void ExitGame() {
+    public void MuteGame()
+    {
+        if (audioManager != null && audioManager.audioSource != null)
+        {
+            switch (audioManager.audioSource.volume)
+            {
+                case 0:
+                    audioManager.audioSource.volume = 1;
+                    buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[1];
+                    Debug.Log("Áudio ativado com sucesso!");
+                    break;
+                case 1:
+                    audioManager.audioSource.volume = 0;
+                    buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[0];
+                    Debug.Log("Áudio mutado com sucesso!");
+                    break;
+            }
+        }
+
+    }
+
+    public void ExitGame()
+    {
         Debug.Log("ExitGame");
         Application.Quit();
     }
