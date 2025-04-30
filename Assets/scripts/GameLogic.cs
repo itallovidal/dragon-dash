@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameLogic : MonoBehaviour
 {
     private int playerScore;
-    public Text scoreText;
+    public GameObject scoreText;
 
     public GameObject gameOverScreen;
 
@@ -13,7 +14,7 @@ public class GameLogic : MonoBehaviour
     public void AddScore()
     {
         playerScore++;
-        scoreText.text = playerScore.ToString();
+        scoreText.gameObject.GetComponent<TextMeshProUGUI>().text = playerScore.ToString();
     }
 
     public void RestartGame()
