@@ -15,9 +15,9 @@ TagManager:
   - fire_magic
   - pipe
   - cloud_level
-  - forest_level
   - space_level
   - explosion_death
+  - florest_level
   layers:
   - Default
   - TransparentFX

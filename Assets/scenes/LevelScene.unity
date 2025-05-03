@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 2689235}
   m_Layer: 0
   m_Name: Florest
-  m_TagString: forest_level
+  m_TagString: florest_level
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1047,6 +1047,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd7e8b3ad165f2a429ab0f912f7dfe6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  btnMuteSprites: []
+  buttonMute: {fileID: 0}
   levelDescription: {fileID: 1443849233}
   level:
   - {fileID: 1560073469}

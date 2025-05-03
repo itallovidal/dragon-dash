@@ -18,7 +18,7 @@ public class GameSceneManagerScript : MonoBehaviour
     private Dictionary<string, string> descriptionHashmap = new Dictionary<string, string>
     {
         { "cloud_level", "Batalhe entre as nuvens contra inimigos desafiadores em 'Altas Nuvens'" },
-        { "forest_level", "Corra pela floresta e enfrente os desafios da selva em 'Savana Selvagem'" },
+        { "florest_level", "Corra pela floresta e enfrente os desafios da selva em 'Savana Selvagem'" },
         { "space_level", "Desafie a gravidade e sobreviva ao caos do universo em 'Entre Estrelas'" }
     };
 
