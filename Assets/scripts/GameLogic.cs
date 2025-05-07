@@ -8,13 +8,27 @@ public class GameLogic : MonoBehaviour
     private int playerScore;
     public GameObject scoreText;
 
+    private int highScore;
+    public GameObject highScoreText;
+
     public GameObject gameOverScreen;
 
     [ContextMenu("Add 1 point to score")]
+
+    void Start()
+    {
+        highScore = PlayerPrefs.GetInt("highscore", 0);
+        highScoreText.gameObject.GetComponent<TextMeshProUGUI>().text = "HIGHSCORE: " + highScore.ToString();
+    }
+
     public void AddScore()
     {
         playerScore++;
         scoreText.gameObject.GetComponent<TextMeshProUGUI>().text = playerScore.ToString();
+
+        if (highScore < playerScore) {
+            PlayerPrefs.SetInt("highscore", playerScore);
+        }
     }
 
     public void RestartGame()
