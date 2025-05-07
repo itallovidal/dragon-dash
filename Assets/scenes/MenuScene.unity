@@ -282,7 +282,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstLayerSprite: {fileID: 843379447845604658, guid: 30f3a85be3f6934498f34489f1440f1d, type: 3}
   secondLayerSprite: {fileID: 0}
-  thirdLayerSprite: {fileID: 0}
 --- !u!4 &339751242
 Transform:
   m_ObjectHideFlags: 0
@@ -484,7 +483,7 @@ Camera:
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 4
+  m_ClearFlags: 2
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
