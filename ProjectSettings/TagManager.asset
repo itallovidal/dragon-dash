@@ -14,10 +14,10 @@ TagManager:
   - enemy_power
   - fire_magic
   - pipe
-  - cloud_level
   - space_level
   - explosion_death
   - florest_level
+  - clouds_level
   layers:
   - Default
   - TransparentFX

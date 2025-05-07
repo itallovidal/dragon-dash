@@ -17,12 +17,12 @@ public class GameSceneManagerScript : MonoBehaviour
     public GameObject[] level;
     private Dictionary<string, string> descriptionHashmap = new Dictionary<string, string>
     {
-        { "cloud_level", "Batalhe entre as nuvens contra inimigos desafiadores em 'Altas Nuvens'" },
+        { "clouds_level", "Batalhe entre as nuvens contra inimigos desafiadores em 'Altas Nuvens'" },
         { "florest_level", "Corra pela floresta e enfrente os desafios da selva em 'Savana Selvagem'" },
         { "space_level", "Desafie a gravidade e sobreviva ao caos do universo em 'Entre Estrelas'" }
     };
 
-    private string chosenLevel = "cloud_level";
+    private string chosenLevel = "clouds_level";
 
     private bool isMovingUp = true;
     private float floatDistance = 0.5f;
@@ -31,9 +31,11 @@ public class GameSceneManagerScript : MonoBehaviour
 
     private void Start()
     {
-        float startY = level[0].transform.position.y;
-        topLimit = startY + floatDistance / 2f;
-        bottomLimit = startY - floatDistance / 2f;
+        if (SceneManager.GetActiveScene().name == "LevelScene") {
+            float startY = level[0].transform.position.y;
+            topLimit = startY + floatDistance / 2f;
+            bottomLimit = startY - floatDistance / 2f;
+        }
     }
 
     private void Awake()
@@ -43,11 +45,20 @@ public class GameSceneManagerScript : MonoBehaviour
         {
             Debug.LogWarning("AudioManager não encontrado na cena!");
         }
+
+        // Sincroniza o sprite do botão com o volume atual
+        if (buttonMute != null && audioManager.audioSource.volume == 0)
+        {
+            buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[0];
+        }
     }
 
     private void Update()
     {
         MoveLevel();
+        if (SceneManager.GetActiveScene().name == "LevelScene") {
+            MoveLevel();
+        }
     }
 
     public void MoveLevel()
@@ -93,7 +104,7 @@ public class GameSceneManagerScript : MonoBehaviour
             return;
         }
 
-        Debug.Log("Starting Level: " + chosenLevel);
+        // Debug.Log("Starting Level: " + chosenLevel);
         SceneManager.LoadScene(chosenLevel);
     }
 
@@ -104,12 +115,14 @@ public class GameSceneManagerScript : MonoBehaviour
             Debug.Log("Ops! Esqueceu de passar a cena");
             return;
         }
+
+        Time.timeScale = 1f;
         SceneManager.LoadScene(sceneAsset.name);
     }
 
     public void ChangeLevelDescription(GameObject elClicked)
     {
-        Debug.Log("Changing Description");
+        // Debug.Log("Changing Description");
 
         Debug.Log(elClicked.gameObject.tag);
 
@@ -132,7 +145,7 @@ public class GameSceneManagerScript : MonoBehaviour
                 case 0:
                     audioManager.audioSource.volume = 1;
                     buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[1];
-                    Debug.Log("Áudio ativado com sucesso!");
+                    // Debug.Log("Áudio ativado com sucesso!");
                     break;
                 case 1:
                     audioManager.audioSource.volume = 0;

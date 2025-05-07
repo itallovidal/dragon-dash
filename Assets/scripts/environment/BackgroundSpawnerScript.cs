@@ -4,13 +4,15 @@ public class BackgroundSpawnerScript : MonoBehaviour
 {
     public GameObject firstLayerSprite;
     public GameObject secondLayerSprite;
-    public GameObject thirdLayerSprite;
+    // public GameObject thirdLayerSprite;
 
 
     void Start()
     {
         InstantiateBackground(firstLayerSprite, 0.5f);
-        InstantiateBackground(secondLayerSprite, 2f);
+
+        if (secondLayerSprite != null) { InstantiateBackground(secondLayerSprite, 2f); }
+
         //InstantiateBackground(thirdLayerSprite);
     }
 
@@ -42,7 +44,7 @@ public class BackgroundSpawnerScript : MonoBehaviour
     void setDeadZone(GameObject layerSprite, float deadZone)
     {
         BackgroundScript bgScript = layerSprite.GetComponent<BackgroundScript>();
-        if( bgScript == null)
+        if (bgScript == null)
         {
             Debug.Log("Ops, esqueceu de vincular o fundo!");
         }
@@ -54,7 +56,8 @@ public class BackgroundSpawnerScript : MonoBehaviour
     {
         BackgroundScript bgScript = layerSprite.GetComponent<BackgroundScript>();
 
-        if (bgScript == null) {
+        if (bgScript == null)
+        {
             Debug.Log("Ops, esqueceu de vincular o fundo!");
         }
 
