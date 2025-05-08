@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9db5a86c413f8904d83d5cf7f63ed82b
+guid: e2105d3bef0b0e4b18de00c7e09fde02
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4461127999354250990
-    second: florest_pipe_0
+      213: 381447797994141037
+    second: background_bottom_layer_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: florest_pipe_0
+      name: background_bottom_layer_0
       rect:
         serializedVersion: 2
-        x: 52
-        y: 77
-        width: 1322
-        height: 3600
+        x: 0
+        y: 0
+        width: 4368
+        height: 2448
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 219d0fc78b3e612c0800000000000000
-      internalID: -4461127999354250990
+      spriteID: d65bbc350cc2b4500800000000000000
+      internalID: 381447797994141037
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0cc767bb1290642d8b8c8fa513c5147d
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      florest_pipe_0: -4461127999354250990
+      background_bottom_layer_0: 381447797994141037
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

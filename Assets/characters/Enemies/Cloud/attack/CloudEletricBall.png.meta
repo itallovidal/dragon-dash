@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CloudEletricBall_0: 7901070325201017931
+      CloudEletricBall_1: -1237425141306165563
+      CloudEletricBall_2: 5315241168925112422
+      CloudEletricBall_3: -8754572780353459243
+      CloudEletricBall_4: -2430012387143495884
+      CloudEletricBall_5: -7998977391349766099
+      CloudEletricBall_6: 4514951959614879475
+      CloudEletricBall_7: 2702140506557415197
+      CloudEletricBall_8: -2635704713119377196
+      CloudEletricBall_9: 4986913604589525067
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

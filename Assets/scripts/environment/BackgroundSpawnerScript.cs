@@ -4,16 +4,16 @@ public class BackgroundSpawnerScript : MonoBehaviour
 {
     public GameObject firstLayerSprite;
     public GameObject secondLayerSprite;
-    // public GameObject thirdLayerSprite;
+    public GameObject thirdLayerSprite;
 
 
     void Start()
     {
         InstantiateBackground(firstLayerSprite, 0.5f);
 
-        if (secondLayerSprite != null) { InstantiateBackground(secondLayerSprite, 2f); }
+        if (secondLayerSprite != null) { InstantiateBackground(secondLayerSprite, 0.3f); }
 
-        //InstantiateBackground(thirdLayerSprite);
+        if (thirdLayerSprite != null) { InstantiateBackground(thirdLayerSprite, 0.2f); }
     }
 
     void InstantiateBackground(GameObject layerSprite, float moveSpeed)
@@ -39,6 +39,11 @@ public class BackgroundSpawnerScript : MonoBehaviour
         setResetPlace(secondSprite, backgroundResetPlace.x);
         setBackgroundMovespeed(secondSprite, moveSpeed);
         setDeadZone(secondSprite, cameraWidth + spriteHalfWidth);
+    //Criando a segunda imagem
+        GameObject thirdSprite = Instantiate(layerSprite, backgroundResetPlace, transform.rotation);
+        setResetPlace(thirdSprite, backgroundResetPlace.x);
+        setBackgroundMovespeed(thirdSprite, moveSpeed);
+        setDeadZone(thirdSprite, cameraWidth + spriteHalfWidth);
     }
 
     void setDeadZone(GameObject layerSprite, float deadZone)
