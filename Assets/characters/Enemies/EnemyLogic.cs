@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class EnemyLogic : MonoBehaviour
 {
-    // bool isAlive = true;
     public GameObject enemyPower;
     public float attackInterval = 2f;
     public GameObject enemyDeathPrefab;
@@ -14,13 +13,13 @@ public class EnemyLogic : MonoBehaviour
 
     void Attack()
     {
-        // instanciando o elemento um pouco mais a frente do drag�o
+        // instanciando o elemento um pouco mais a frente do inimigo
         float spriteHalfWidth = GetComponent<SpriteRenderer>().bounds.extents.x + 0.8f;
         Vector3 powerPositon = new Vector3(transform.position.x - spriteHalfWidth, transform.position.y, transform.position.z);
         GameObject power = Instantiate(enemyPower, powerPositon, Quaternion.Euler(0, 0, 90));
         power.GetComponent<MagicScript>().isFromEnemy = true;
 
-        // Destroi o poder disparado pelo dragao depois de 3.5 segundos
+        // Destroi o poder disparado pelo inimigo depois de 3.5 segundos
         Destroy(power, 3.5f);
     }
 
@@ -43,7 +42,7 @@ public class EnemyLogic : MonoBehaviour
         if (enemyDeathPrefab != null)
         {
             // Instancia o prefab de explosão na posição do inimigo
-            GameObject explosion = Instantiate(enemyDeathPrefab, transform.position, Quaternion.identity);
+            Instantiate(enemyDeathPrefab, transform.position, Quaternion.identity);
         }
     }
 }
