@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System;
 
 public class GameLogic : MonoBehaviour
 {
@@ -11,7 +12,8 @@ public class GameLogic : MonoBehaviour
     private int highScore;
     public GameObject highScoreText;
 
-    public GameObject gameOverScreen;
+    public GameObject gameOverlay;
+    public GameObject overlayText;
 
     void Start()
     {
@@ -32,13 +34,23 @@ public class GameLogic : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        string text = overlayText.gameObject.GetComponent<TextMeshProUGUI>().text;
+        
+        if (text == "GameOver") {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+
+        if (text == "Pause") {
+            gameOverlay.SetActive(false);
+        }
+        
         Time.timeScale = 1f;
     }
 
-    public void GameOver()
+    public void GameOverlay(string text)
     {
-        gameOverScreen.SetActive(true);
+        overlayText.gameObject.GetComponent<TextMeshProUGUI>().text = text;
+        gameOverlay.SetActive(true);
         Time.timeScale = 0f;
     }
 }

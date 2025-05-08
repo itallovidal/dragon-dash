@@ -41,6 +41,7 @@ public class PlayerScript : MonoBehaviour
     {
         handleDragonFlySpeed();
         handleMoviment();
+        handleOverlay();
     }
 
 
@@ -53,7 +54,7 @@ public class PlayerScript : MonoBehaviour
     // Se ele colidir com qualquer coisa é game over!
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        gameLogic.GameOver();
+        gameLogic.GameOverlay("GameOver");
         isAlive = false;
     }
 
@@ -85,7 +86,7 @@ public class PlayerScript : MonoBehaviour
         // Se colidir com o trigger do SceneCollider chame o GameOver
         if (collision.gameObject.layer == 6)
         {
-            gameLogic.GameOver();
+            gameLogic.GameOverlay("GameOver");
             isAlive = false;
         }
 
@@ -118,6 +119,15 @@ public class PlayerScript : MonoBehaviour
                 default:
                     break;
             }
+        }
+    }
+
+    void handleOverlay()
+    {
+        // Verificando se o jogador pausou o jogo
+        if (Input.GetKeyDown(KeyCode.Escape) && isAlive)
+        {
+            gameLogic.GameOverlay("Pause");
         }
     }
 
