@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 2689234}
   - component: {fileID: 2689233}
   - component: {fileID: 2689235}
+  - component: {fileID: 2689236}
   m_Layer: 0
   m_Name: Florest
   m_TagString: florest_level
@@ -154,7 +155,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 91.99998}
+  m_AnchoredPosition: {x: 0, y: 70}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2689233
@@ -241,7 +242,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1332203129}
         m_TargetAssemblyTypeName: GameSceneManagerScript, Assembly-CSharp
-        m_MethodName: ChangeLevelDescription
+        m_MethodName: ChangeLevel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2689228}
@@ -251,6 +252,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+--- !u!95 &2689236
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689228}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 82fc927e442bcfb4ea66ef7226b83346, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &65868977
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +418,7 @@ GameObject:
   - component: {fileID: 88153807}
   - component: {fileID: 88153806}
   - component: {fileID: 88153808}
+  - component: {fileID: 88153809}
   m_Layer: 0
   m_Name: Space
   m_TagString: space_level
@@ -418,7 +442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -315, y: 91.99998}
+  m_AnchoredPosition: {x: -315, y: 70}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88153806
@@ -505,7 +529,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1332203129}
         m_TargetAssemblyTypeName: GameSceneManagerScript, Assembly-CSharp
-        m_MethodName: ChangeLevelDescription
+        m_MethodName: ChangeLevel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 88153802}
@@ -515,6 +539,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+--- !u!95 &88153809
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88153802}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 27a6367ead9c1a14582bd30780e0660b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &339751240
 GameObject:
   m_ObjectHideFlags: 0
@@ -1303,6 +1349,7 @@ GameObject:
   - component: {fileID: 1560073475}
   - component: {fileID: 1560073474}
   - component: {fileID: 1560073476}
+  - component: {fileID: 1560073477}
   m_Layer: 0
   m_Name: Clouds
   m_TagString: clouds_level
@@ -1326,7 +1373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 315, y: 92}
+  m_AnchoredPosition: {x: 315, y: 70}
   m_SizeDelta: {x: 10, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1560073474
@@ -1413,7 +1460,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1332203129}
         m_TargetAssemblyTypeName: GameSceneManagerScript, Assembly-CSharp
-        m_MethodName: ChangeLevelDescription
+        m_MethodName: ChangeLevel
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1560073469}
@@ -1423,6 +1470,28 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+--- !u!95 &1560073477
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1560073469}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bec5a437f1515164f8f5f7aab11d614c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1653229241
 GameObject:
   m_ObjectHideFlags: 0
