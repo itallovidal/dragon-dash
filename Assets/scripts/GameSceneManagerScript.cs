@@ -55,7 +55,6 @@ public class GameSceneManagerScript : MonoBehaviour
 
     private void Update()
     {
-        MoveLevel();
         if (SceneManager.GetActiveScene().name == "LevelScene") {
             MoveLevel();
         }

@@ -13,14 +13,13 @@ public class GameLogic : MonoBehaviour
 
     public GameObject gameOverScreen;
 
-    [ContextMenu("Add 1 point to score")]
-
     void Start()
     {
         highScore = PlayerPrefs.GetInt("highscore", 0);
         highScoreText.gameObject.GetComponent<TextMeshProUGUI>().text = "HIGHSCORE: " + highScore.ToString();
     }
 
+    [ContextMenu("Add 1 point to score")]
     public void AddScore()
     {
         playerScore++;
