@@ -39,7 +39,7 @@ public class GameSceneManagerScript : MonoBehaviour
             buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[0];
         }
     }
-`
+
     public void StartLevel()
     {
         if (chosenLevel == null)
