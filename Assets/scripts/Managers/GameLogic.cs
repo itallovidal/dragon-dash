@@ -15,10 +15,13 @@ public class GameLogic : MonoBehaviour
     public GameObject gameOverlay;
     public GameObject overlayText;
 
+    PlayerScript playerScript;
+
     void Start()
     {
         highScore = PlayerPrefs.GetInt("highscore", 0);
         highScoreText.gameObject.GetComponent<TextMeshProUGUI>().text = "HIGHSCORE: " + highScore.ToString();
+        playerScript = FindFirstObjectByType<PlayerScript>();
     }
 
     [ContextMenu("Add 1 point to score")]
@@ -42,6 +45,7 @@ public class GameLogic : MonoBehaviour
 
         if (text == "Pause") {
             gameOverlay.SetActive(false);
+            playerScript.SetGameOverlay(false);
         }
         
         Time.timeScale = 1f;
@@ -51,6 +55,7 @@ public class GameLogic : MonoBehaviour
     {
         overlayText.gameObject.GetComponent<TextMeshProUGUI>().text = text;
         gameOverlay.SetActive(true);
+        playerScript.SetGameOverlay(true);
         Time.timeScale = 0f;
     }
 }
