@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
     }
 
     public Rigidbody2D dragonRigidBody;
-    bool isAlive = true;
+    bool isGameOverlay = false;
     public DragonPower currentPower;
 
     private float dragonSpeed = 6f;
@@ -55,7 +55,7 @@ public class PlayerScript : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         gameLogic.GameOverlay("GameOver");
-        isAlive = false;
+        isGameOverlay = true;
     }
 
     // Se ele colidir com algo que é um trigger, depende do que esse algo é
@@ -87,7 +87,7 @@ public class PlayerScript : MonoBehaviour
         if (collision.gameObject.layer == 6)
         {
             gameLogic.GameOverlay("GameOver");
-            isAlive = false;
+            isGameOverlay = true;
         }
 
     }
@@ -95,14 +95,14 @@ public class PlayerScript : MonoBehaviour
     void handleMoviment()
     {
         // Verificando se o jogador pulou
-        if (Input.GetKeyDown(KeyCode.Space) && isAlive)
+        if (Input.GetKeyDown(KeyCode.Space) && !isGameOverlay)
         {
             animator.SetTrigger("flew");
             dragonRigidBody.linearVelocity = Vector2.up * jumpStrength;
         }
 
         // Verificando se utilizou o powerUp
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isAlive)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !isGameOverlay)
         {
             animator.SetTrigger("attack");
             switch (currentPower)
@@ -125,9 +125,10 @@ public class PlayerScript : MonoBehaviour
     void handleOverlay()
     {
         // Verificando se o jogador pausou o jogo
-        if (Input.GetKeyDown(KeyCode.Escape) && isAlive)
+        if (Input.GetKeyDown(KeyCode.Escape) && !isGameOverlay)
         {
             gameLogic.GameOverlay("Pause");
+            isGameOverlay = true;
         }
     }
 
