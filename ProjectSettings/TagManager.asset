@@ -18,6 +18,7 @@ TagManager:
   - explosion_death
   - florest_level
   - clouds_level
+  - LevelLoader
   layers:
   - Default
   - TransparentFX
@@ -72,6 +73,9 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 539725289
+    locked: 0
+  - name: Transition
+    uniqueID: 4093151993
     locked: 0
   m_RenderingLayers:
   - Default

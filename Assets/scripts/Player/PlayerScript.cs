@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
     }
 
     public Rigidbody2D dragonRigidBody;
-    private bool isGameOverlay = false;
+    public bool isGameOverlay = false;
     public DragonPower currentPower;
 
     private float dragonSpeed = 6f;
@@ -54,7 +54,7 @@ public class PlayerScript : MonoBehaviour
     // Se ele colidir com qualquer coisa é game over!
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        gameLogic.GameOverlay("GameOver");
+        SetGameOverlay("GameOver");
     }
 
     // Se ele colidir com algo que é um trigger, depende do que esse algo é
@@ -85,7 +85,7 @@ public class PlayerScript : MonoBehaviour
         // Se colidir com o trigger do SceneCollider chame o GameOver
         if (collision.gameObject.layer == 6)
         {
-            gameLogic.GameOverlay("GameOver");
+            SetGameOverlay("GameOver");
         }
 
     }
@@ -125,7 +125,7 @@ public class PlayerScript : MonoBehaviour
         // Verificando se o jogador pausou o jogo
         if (Input.GetKeyDown(KeyCode.Escape) && !isGameOverlay)
         {
-            gameLogic.GameOverlay("Pause");
+            SetGameOverlay("Pause");
         }
     }
 
@@ -197,8 +197,10 @@ public class PlayerScript : MonoBehaviour
         ChangePower(DragonPower.STARNDARD_POWER);
     }
 
-    public void SetGameOverlay(bool state)
+    public void SetGameOverlay(string text)
     {
-        isGameOverlay = state;
+        if (isGameOverlay == false) {
+            gameLogic.GameOverlay(text);
+        }
     }
 }

@@ -24,6 +24,7 @@ public class GameSceneManagerScript : MonoBehaviour
 
     private string chosenLevel = "clouds_level";
 
+    public LevelLoader levelLoader;
 
     private void Awake()
     {
@@ -48,7 +49,7 @@ public class GameSceneManagerScript : MonoBehaviour
         }
 
         // Debug.Log("Starting Level: " + chosenLevel);
-        SceneManager.LoadScene(chosenLevel);
+        levelLoader.Transition(chosenLevel);
     }
 
     public void LoadScene(SceneAsset sceneAsset)
@@ -60,7 +61,7 @@ public class GameSceneManagerScript : MonoBehaviour
         }
 
         Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneAsset.name);
+        levelLoader.Transition(sceneAsset.name);
     }
 
     public void ChangeLevel(GameObject elClicked)
@@ -112,8 +113,10 @@ public class GameSceneManagerScript : MonoBehaviour
         Application.Quit();
     }
 
-    private void ResetAnimators() {
-        foreach (GameObject element in level) {
+    private void ResetAnimators()
+    {
+        foreach (GameObject element in level)
+        {
             Animator level_animator = element.gameObject.GetComponent<Animator>();
             level_animator.SetBool("chose_level", false);
         }

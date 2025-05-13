@@ -45,7 +45,7 @@ public class GameLogic : MonoBehaviour
 
         if (text == "Pause") {
             gameOverlay.SetActive(false);
-            playerScript.SetGameOverlay(false);
+            playerScript.isGameOverlay = false;
         }
         
         Time.timeScale = 1f;
@@ -55,7 +55,7 @@ public class GameLogic : MonoBehaviour
     {
         overlayText.gameObject.GetComponent<TextMeshProUGUI>().text = text;
         gameOverlay.SetActive(true);
-        playerScript.SetGameOverlay(true);
+        playerScript.isGameOverlay = true;
         Time.timeScale = 0f;
     }
 }
