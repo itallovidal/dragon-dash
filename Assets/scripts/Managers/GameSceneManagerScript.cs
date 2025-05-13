@@ -1,10 +1,6 @@
 using System.Collections.Generic;
-using Microsoft.Unity.VisualStudio.Editor;
 using TMPro;
-using Unity.VisualScripting;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameSceneManagerScript : MonoBehaviour
@@ -52,16 +48,16 @@ public class GameSceneManagerScript : MonoBehaviour
         levelLoader.Transition(chosenLevel);
     }
 
-    public void LoadScene(SceneAsset sceneAsset)
+    public void LoadScene(string sceneName)
     {
-        if (sceneAsset == null)
+        if (sceneName == null)
         {
-            Debug.Log("Ops! Esqueceu de passar a cena");
+            Debug.Log("Ops! Esqueceu de passar o nome da cena");
             return;
         }
 
         Time.timeScale = 1f;
-        levelLoader.Transition(sceneAsset.name);
+        levelLoader.Transition(sceneName);
     }
 
     public void ChangeLevel(GameObject elClicked)

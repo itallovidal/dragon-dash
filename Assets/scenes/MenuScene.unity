@@ -713,13 +713,13 @@ MonoBehaviour:
       - m_Target: {fileID: 1332203129}
         m_TargetAssemblyTypeName: GameSceneManagerScript, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 2
+        m_Mode: 5
         m_Arguments:
-          m_ObjectArgument: {fileID: 102900000, guid: 46840decd6cbe3e44a6cecd98496e0fb, type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEditor.SceneAsset, UnityEditor.CoreModule
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: LevelScene
           m_BoolArgument: 0
         m_CallState: 1
 --- !u!114 &838729098
