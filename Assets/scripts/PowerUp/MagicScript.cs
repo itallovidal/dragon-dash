@@ -45,5 +45,10 @@ public class MagicScript : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (collision.gameObject.tag == "center_pipe" && playerMagics.Contains(magicTag))
+        {
+            Destroy(collision.gameObject);
+        }
     }
 }

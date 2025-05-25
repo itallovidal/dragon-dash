@@ -19,6 +19,7 @@ TagManager:
   - florest_level
   - clouds_level
   - LevelLoader
+  - center_pipe
   layers:
   - Default
   - TransparentFX

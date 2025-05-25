@@ -101,5 +101,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadZone: 0
-  moveSpeed: 0.8
+  moveSpeed: 2
   backgroundResetPlace: 0

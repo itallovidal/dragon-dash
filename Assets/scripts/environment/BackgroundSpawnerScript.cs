@@ -11,19 +11,19 @@ public class BackgroundSpawnerScript : MonoBehaviour
     {
         InstantiateBackground(firstLayerSprite, 0.5f);
 
-        if (secondLayerSprite != null) { InstantiateBackground(secondLayerSprite, 0.3f); }
+        if (secondLayerSprite != null) { InstantiateBackground(secondLayerSprite, 2f); }
 
         if (thirdLayerSprite != null) { InstantiateBackground(thirdLayerSprite, 0.2f); }
     }
 
+    // Funcao para criar 2 imagens para o sprite (background) que sera passado por parametro
     void InstantiateBackground(GameObject layerSprite, float moveSpeed)
     {
-        // Criando a primeira imagem no centro do jogo, baseado na c�mera
+        // Criando a primeira imagem no centro do jogo, baseado na camera
         Vector3 cameraCenterPosition = new Vector3(transform.position.x, transform.position.y);
         GameObject firstSprite = Instantiate(layerSprite, cameraCenterPosition, transform.rotation);
 
-
-        // Pegando metade do tamanho da imagem e o tamanho da c�mera para achar o posicionamento
+        // Pegando metade do tamanho da imagem e o tamanho da camera para achar o posicionamento
         // correto da segunda imagem e do reposicionamento quando as imagens chegam no limite
         float spriteHalfWidth = layerSprite.GetComponent<SpriteRenderer>().bounds.extents.x;
         float cameraWidth = Camera.main.transform.position.x + Camera.main.orthographicSize * Camera.main.aspect;
@@ -39,11 +39,7 @@ public class BackgroundSpawnerScript : MonoBehaviour
         setResetPlace(secondSprite, backgroundResetPlace.x);
         setBackgroundMovespeed(secondSprite, moveSpeed);
         setDeadZone(secondSprite, cameraWidth + spriteHalfWidth);
-    //Criando a segunda imagem
-        GameObject thirdSprite = Instantiate(layerSprite, backgroundResetPlace, transform.rotation);
-        setResetPlace(thirdSprite, backgroundResetPlace.x);
-        setBackgroundMovespeed(thirdSprite, moveSpeed);
-        setDeadZone(thirdSprite, cameraWidth + spriteHalfWidth);
+        
     }
 
     void setDeadZone(GameObject layerSprite, float deadZone)
