@@ -128,133 +128,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: powerUpEletric_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 223
-        width: 18
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3f8e6730d4976e550800000000000000
-      internalID: 6189768109544892659
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: powerUpEletric_1
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 163
-        width: 134
-        height: 120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 24e68353b5655a860800000000000000
-      internalID: 7540528100836666946
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: powerUpEletric_2
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 153
-        width: 133
-        height: 130
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ebe2ade45cc7edce0800000000000000
-      internalID: -1378527249055469890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: powerUpEletric_3
-      rect:
-        serializedVersion: 2
-        x: 91
-        y: 157
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 87aacc92f0b36d9e0800000000000000
-      internalID: -1597024081544435080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: powerUpEletric_4
+      name: PowerUp_Eletric_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 140
-        height: 123
+        width: 198
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 623616dac82b2efe0800000000000000
-      internalID: -1161169436634160346
+      spriteID: 680caac678efd49e3b635a1887ee9adf
+      internalID: -904369738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: powerUpEletric_5
+      name: PowerUp_Eletric_1
       rect:
         serializedVersion: 2
-        x: 217
-        y: 1
-        width: 138
-        height: 126
+        x: 198
+        y: 0
+        width: 198
+        height: 229
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 434cc93b112e1f530800000000000000
-      internalID: 3887136519053165620
+      spriteID: bbfad37cd18c20140ac78b9e10590db5
+      internalID: 1076065555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Eletric_2
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 0
+        width: 198
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9aab17db5cfa624b6eedc03720973d
+      internalID: 1902132657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Eletric_3
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 0
+        width: 198
+        height: 229
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abefa277fcf50ff2381f6e4d67b179fc
+      internalID: -1281780060
       vertices: []
       indices: 
       edges: []
@@ -263,7 +219,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d2263abce05812da0a26f62c1e5bd648
     internalID: 0
     vertices: []
     indices: 
@@ -273,12 +229,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      powerUpEletric_0: 6189768109544892659
-      powerUpEletric_1: 7540528100836666946
-      powerUpEletric_2: -1378527249055469890
-      powerUpEletric_3: -1597024081544435080
-      powerUpEletric_4: -1161169436634160346
-      powerUpEletric_5: 3887136519053165620
+      PowerUp_Eletric_0: -904369738
+      PowerUp_Eletric_1: 1076065555
+      PowerUp_Eletric_2: 1902132657
+      PowerUp_Eletric_3: -1281780060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
