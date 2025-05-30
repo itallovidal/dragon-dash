@@ -6,10 +6,12 @@ public class MagicScript : MonoBehaviour
     private string[] playerMagics = { "ice_magic", "eletric_magic", "fire_magic" };
     private string magicTag;
     public bool isFromEnemy = false;
+    GameLogic gameLogic;
 
     void Start()
     {
         magicTag = gameObject.tag;
+        gameLogic = GameObject.FindGameObjectWithTag("Logic").GetComponent<GameLogic>();
     }
     void Update()
     {
@@ -49,6 +51,11 @@ public class MagicScript : MonoBehaviour
         if (collision.gameObject.tag == "center_pipe" && playerMagics.Contains(magicTag))
         {
             Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == "asteroid" && playerMagics.Contains(magicTag))
+        {
+            Destroy(collision.gameObject);
+            gameLogic.AddScore();
         }
     }
 }
