@@ -20,6 +20,7 @@ TagManager:
   - clouds_level
   - LevelLoader
   - center_pipe
+  - asteroid
   layers:
   - Default
   - TransparentFX
