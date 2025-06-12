@@ -20,9 +20,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/space_level.unity
     guid: d4a6d8ed7a309949f984995dc1cb5275
-  - enabled: 1
-    path: Assets/Scenes/fire_power_super_special.unity
-    guid: 11b863c6435ee634496cd3ec739605ef
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
