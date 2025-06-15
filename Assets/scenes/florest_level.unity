@@ -626,8 +626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486be55a97a8308468ec42b4647e6f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLayerSprite: {fileID: 5966452133203895247, guid: 54eb41db164b5f91a90fb2adb868ca6a, type: 3}
-  secondLayerSprite: {fileID: 9205190518206495398, guid: 6069c5a34ec52463ba855604811a3645, type: 3}
+  firstLayerSprite: {fileID: 8436002030846936574, guid: 211f246664124a21fb2c6d27b30ebb12, type: 3}
+  secondLayerSprite: {fileID: 0}
   thirdLayerSprite: {fileID: 0}
 --- !u!4 &515602067
 Transform:

@@ -6,11 +6,11 @@ using UnityEngine;
 public class AsteroidSpawnerScript : MonoBehaviour
 {
     public GameObject asteroid;
-    public float minY = -2f;
-    public float maxY = 2f;
+    public float minY = -4f;
+    public float maxY = 4f;
     public float spawnInterval = 5f;
     public bool isSpawning = true;
-    public float delayBetweenPairSpawns = 0.3f;
+    public float delayBetweenPairSpawns = 0.5f;
     public int maxSpawnAttempts = 10;
     public float asteroidSpawnCheckRadius = 1.0f;
     public string asteroidTag = "asteroid";
@@ -88,6 +88,9 @@ public class AsteroidSpawnerScript : MonoBehaviour
             if (positionFound)
             {
                 GameObject asteroidInstance = Instantiate(asteroid, spawnPosition, Quaternion.identity);
+                float heightMultiplier = UnityEngine.Random.Range(0.5f, 1.5f);
+                asteroidInstance.transform.localScale *= heightMultiplier;
+
                 activeAsteroids.Add(asteroidInstance);
             }
             else
