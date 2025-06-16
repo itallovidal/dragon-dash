@@ -6,13 +6,13 @@ using UnityEngine;
 public class AsteroidSpawnerScript : MonoBehaviour
 {
     public GameObject asteroid;
-    public float minY = -4f;
-    public float maxY = 4f;
+    public float minY = -15f;
+    public float maxY = 20f;
     public float spawnInterval = 5f;
     public bool isSpawning = true;
-    public float delayBetweenPairSpawns = 0.5f;
+    public float delayBetweenPairSpawns = 1f;
     public int maxSpawnAttempts = 10;
-    public float asteroidSpawnCheckRadius = 1.0f;
+    public float asteroidSpawnCheckRadius = 20f;
     public string asteroidTag = "asteroid";
 
     private List<GameObject> activeAsteroids = new List<GameObject>();
