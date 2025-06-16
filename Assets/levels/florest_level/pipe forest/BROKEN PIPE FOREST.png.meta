@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BROKEN PIPE FOREST_0: -4309388174839453576
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

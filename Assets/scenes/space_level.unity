@@ -580,9 +580,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486be55a97a8308468ec42b4647e6f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLayerSprite: {fileID: 5036130220630106452, guid: 28ded318bea354284affda08f9051326, type: 3}
-  secondLayerSprite: {fileID: 0}
-  thirdLayerSprite: {fileID: 0}
+  firstLayerSprite: {fileID: 7684087080020477190, guid: 74dabb0f0b1f91e0eb2c0f90331ebf1c, type: 3}
+  secondLayerSprite: {fileID: 6100887696302815298, guid: 48609ec293a48ba15a5df8dd4ea1f07c, type: 3}
+  thirdLayerSprite: {fileID: 165384541582626450, guid: 505843abb9b4d5193a30c0a9aaa58c08, type: 3}
 --- !u!4 &515602067
 Transform:
   m_ObjectHideFlags: 0

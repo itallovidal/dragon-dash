@@ -5,6 +5,7 @@ public class BackgroundSpawnerScript : MonoBehaviour
     public GameObject firstLayerSprite;
     public GameObject secondLayerSprite;
     public GameObject thirdLayerSprite;
+    public GameObject fourthLayerSprite;
 
 
     void Start()
@@ -14,6 +15,7 @@ public class BackgroundSpawnerScript : MonoBehaviour
         if (secondLayerSprite != null) { InstantiateBackground(secondLayerSprite, 2f); }
 
         if (thirdLayerSprite != null) { InstantiateBackground(thirdLayerSprite, 0.2f); }
+        if (fourthLayerSprite != null) { InstantiateBackground(fourthLayerSprite, 0.1f); }
     }
 
     // Funcao para criar 2 imagens para o sprite (background) que sera passado por parametro
