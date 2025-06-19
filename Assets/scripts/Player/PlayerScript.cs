@@ -29,6 +29,9 @@ public class PlayerScript : MonoBehaviour
     public GameObject iceball;
     public GameObject electricball;
 
+    public bool attackCooldownEnabled = false;
+    public float attackCooldownDuration = 0.5f;
+    private float attackCooldownTimer = 0f;
 
     void Start()
     {
@@ -36,14 +39,18 @@ public class PlayerScript : MonoBehaviour
         ChangePower(currentPower);
     }
 
-
     void Update()
     {
         handleDragonFlySpeed();
         handleMoviment();
         handleOverlay();
-    }
 
+        // Atualiza o tempo do ataque
+        if (attackCooldownTimer > 0)
+        {
+            attackCooldownTimer -= Time.deltaTime;
+        }
+    }
 
     private void FixedUpdate()
     {
@@ -100,7 +107,7 @@ public class PlayerScript : MonoBehaviour
         }
 
         // Verificando se utilizou o powerUp
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !isGameOverlay)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !isGameOverlay && CanAttack())
         {
             animator.SetTrigger("attack");
             switch (currentPower)
@@ -120,6 +127,19 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+    // Verifica se o jogador pode atacar com base nas configurações de tempo de recarga
+    bool CanAttack()
+    {
+        // Se o tempo de recarga estiver desabilitado ou o cronômetro tiver expirado, o jogador pode atacar
+        if (!attackCooldownEnabled || attackCooldownTimer <= 0)
+        {
+            attackCooldownTimer = attackCooldownDuration;
+            return true;
+        }
+
+        return false;
+    }
+
     void handleOverlay()
     {
         // Verificando se o jogador pausou o jogo
@@ -137,7 +157,7 @@ public class PlayerScript : MonoBehaviour
         GameObject power = Instantiate(spriteAttack, dragonPosition, Quaternion.Euler(0, 0, 90));
 
         // Destroi o poder disparado pelo dragao depois de 3.5 segundos
-        Destroy(power, 3.5f);
+        Destroy(power, 2.5f);
     }
 
     void handleDragonFlySpeed()

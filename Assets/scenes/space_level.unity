@@ -1786,6 +1786,8 @@ MonoBehaviour:
   fireball: {fileID: 4862007311518225085, guid: 6fc9c9a06ad7bf94aaf52a108325d872, type: 3}
   iceball: {fileID: 4014795953393301030, guid: f86e6d0e14bbd4d4b891fd2588d9c878, type: 3}
   electricball: {fileID: 2600909964480136427, guid: 323aa6a8a70866f46a29764e1a2cbd1c, type: 3}
+  attackCooldownEnabled: 1
+  attackCooldownDuration: 0.5
 --- !u!95 &1565299234
 Animator:
   serializedVersion: 7
