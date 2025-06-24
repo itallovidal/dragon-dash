@@ -1,13 +1,25 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
+using System.Collections.Generic;
 
 public class AudioManagerScript : MonoBehaviour
 {
     public static AudioManagerScript instance;
 
     public AudioSource audioSource;
+    
+    // Adicione referências para os diferentes clips de música
+    [Header("Music Tracks")]
+    public AudioClip menuMusic;
+    public AudioClip cloudsLevelMusic;
+    public AudioClip florestLevelMusic;
+    public AudioClip spaceLevelMusic;
+    
+    // Dicionário para mapear cenas aos seus clips de música
+    private Dictionary<string, AudioClip> sceneMusicMap;
 
-    private string[] scenesWithMusic = { "LevelScene", "MenuScene" };
+    private string[] scenesWithMusic = {"LevelScene", "MenuScene", "clouds_level", "florest_level", "space_level"};
 
     private void Awake()
     {
@@ -18,11 +30,48 @@ public class AudioManagerScript : MonoBehaviour
         }
 
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        if (scenesWithMusic.Contains(SceneManager.GetActiveScene().name))
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        // Inicializa o dicionário que mapeia cenas às músicas
+        InitializeMusicMap();
 
         audioSource = GetComponent<AudioSource>();
-        audioSource.loop = true;
-        audioSource.Play();
+        
+        // Configura a música da cena atual
+        UpdateMusicForCurrentScene();
+    }
+
+    private void InitializeMusicMap()
+    {
+        sceneMusicMap = new Dictionary<string, AudioClip>
+        {
+            { "MenuScene", menuMusic },
+            { "LevelScene", menuMusic }, // Use a mesma música do menu ou defina outra
+            { "clouds_level", cloudsLevelMusic },
+            { "florest_level", florestLevelMusic },
+            { "space_level", spaceLevelMusic }
+        };
+    }
+
+    private void UpdateMusicForCurrentScene()
+    {
+        string currentScene = SceneManager.GetActiveScene().name;
+        if (sceneMusicMap.TryGetValue(currentScene, out AudioClip clip) && clip != null)
+        {
+            if (audioSource.clip != clip)
+            {
+                audioSource.clip = clip;
+                audioSource.Play();
+            }
+        }
     }
 
     private void OnEnable()
@@ -39,9 +88,22 @@ public class AudioManagerScript : MonoBehaviour
     {
         if (System.Array.Exists(scenesWithMusic, s => s == scene.name))
         {
-            if (!audioSource.isPlaying)
+            // Verifica se há uma música específica para esta cena
+            if (sceneMusicMap.TryGetValue(scene.name, out AudioClip clip) && clip != null)
             {
-                audioSource.Play();
+                // Se a música atual for diferente, troca para a nova
+                if (audioSource.clip != clip)
+                {
+                    audioSource.clip = clip;
+                    float volume = SceneManager.GetActiveScene().name == "MenuScene" ? 1f : 0.2f;
+                    audioSource.volume = volume;
+                    audioSource.Play();
+                }
+                // Se for a mesma música mas não estiver tocando, inicia
+                else if (!audioSource.isPlaying)
+                {
+                    audioSource.Play();
+                }
             }
         }
         else

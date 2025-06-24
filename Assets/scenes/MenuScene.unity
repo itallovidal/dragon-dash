@@ -1051,6 +1051,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 0}
+  menuMusic: {fileID: 8300000, guid: d46ae8e26d7fee086845476ec10242f1, type: 3}
+  cloudsLevelMusic: {fileID: 8300000, guid: 6cbf2cdfae48206008f13e11eb6647db, type: 3}
+  florestLevelMusic: {fileID: 8300000, guid: d16a28753dd55b54ab553ac464b8cf25, type: 3}
+  spaceLevelMusic: {fileID: 8300000, guid: a4d7c001d51e8bff59772e9a41f72ff1, type: 3}
 --- !u!1 &1332203128
 GameObject:
   m_ObjectHideFlags: 0

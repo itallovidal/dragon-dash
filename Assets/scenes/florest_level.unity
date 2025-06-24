@@ -1293,7 +1293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aceda8352cce214aa7f754cfca1a45d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 2095911637731100945, guid: 6362e0ab3a8108948a6cc2818a8c9111, type: 3}
+  enemy: {fileID: 1552072007318022176, guid: ab5de8e163ba79b0b864c6ee308976cb, type: 3}
   minY: -2
   maxY: 2
   spawnInterval: 5
@@ -1781,7 +1781,7 @@ MonoBehaviour:
   fireball: {fileID: 4862007311518225085, guid: 6fc9c9a06ad7bf94aaf52a108325d872, type: 3}
   iceball: {fileID: 4014795953393301030, guid: f86e6d0e14bbd4d4b891fd2588d9c878, type: 3}
   electricball: {fileID: 2600909964480136427, guid: 323aa6a8a70866f46a29764e1a2cbd1c, type: 3}
-  attackCooldownEnabled: 0
+  attackCooldownEnabled: 1
   attackCooldownDuration: 0.5
 --- !u!95 &1565299234
 Animator:

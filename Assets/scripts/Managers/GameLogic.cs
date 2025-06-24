@@ -15,8 +15,24 @@ public class GameLogic : MonoBehaviour
     public GameObject gameOverlay;
     public GameObject overlayText;
 
-    PlayerScript playerScript;
+    private PlayerScript playerScript;
+    private AudioManagerScript audioManager;
 
+    private void Awake()
+    {
+        // Se não encontrar, busca na cena
+        if (audioManager == null)
+        {
+            audioManager = FindFirstObjectByType<AudioManagerScript>();
+        }
+        
+        // Se não tiver enccontrado sinaliza
+        if (audioManager == null)   
+        {
+            Debug.LogWarning("AudioManager não encontrado na cena!");
+        }
+    }
+ 
     void Start()
     {
         highScore = PlayerPrefs.GetInt("highscore", 0);
@@ -38,17 +54,24 @@ public class GameLogic : MonoBehaviour
     public void RestartGame()
     {
         string text = overlayText.gameObject.GetComponent<TextMeshProUGUI>().text;
-        
-        if (text == "GameOver") {
+
+        if (text == "GameOver")
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
-        if (text == "Pause") {
+        if (text == "Pause")
+        {
             gameOverlay.SetActive(false);
             playerScript.isGameOverlay = false;
         }
-        
+
         Time.timeScale = 1f;
+        
+        if (audioManager != null)
+        {
+            audioManager.audioSource.volume = 0.2f;
+        }
     }
 
     public void GameOverlay(string text)
@@ -57,5 +80,10 @@ public class GameLogic : MonoBehaviour
         gameOverlay.SetActive(true);
         playerScript.isGameOverlay = true;
         Time.timeScale = 0f;
+        
+        if (audioManager != null)
+        {
+            audioManager.audioSource.volume = 0;
+        }
     }
 }

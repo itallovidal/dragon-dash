@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,12 +29,6 @@ public class GameSceneManagerScript : MonoBehaviour
         if (audioManager == null)
         {
             Debug.LogWarning("AudioManager não encontrado na cena!");
-        }
-
-        // Sincroniza o sprite do botão com o volume atual
-        if (buttonMute != null && audioManager.audioSource.volume == 0)
-        {
-            buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[0];
         }
     }
 
@@ -89,7 +84,8 @@ public class GameSceneManagerScript : MonoBehaviour
             switch (audioManager.audioSource.volume)
             {
                 case 0:
-                    audioManager.audioSource.volume = 1;
+                    float volume = SceneManager.GetActiveScene().name == "MenuScene" ? 1f : 0.2f;
+                    audioManager.audioSource.volume = volume;
                     buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[1];
                     // Debug.Log("Áudio ativado com sucesso!");
                     break;

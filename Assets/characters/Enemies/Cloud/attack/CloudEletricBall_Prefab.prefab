@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7675747196544091592}
   - component: {fileID: 5906700608426194280}
   - component: {fileID: 1691737262705801564}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CloudEletricBall_Prefab
   m_TagString: enemy_power
   m_Icon: {fileID: 0}
