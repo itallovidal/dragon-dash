@@ -758,9 +758,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486be55a97a8308468ec42b4647e6f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLayerSprite: {fileID: 843379447845604658, guid: 30f3a85be3f6934498f34489f1440f1d, type: 3}
-  secondLayerSprite: {fileID: 2189553253363794280, guid: 614a5f84fd5d43b4c9d6955663923566, type: 3}
-  thirdLayerSprite: {fileID: 0}
+  layerSprites:
+  - {fileID: 843379447845604658, guid: 30f3a85be3f6934498f34489f1440f1d, type: 3}
+  - {fileID: 2189553253363794280, guid: 614a5f84fd5d43b4c9d6955663923566, type: 3}
+  layerSpeeds:
+  - 0.5
+  - 2
 --- !u!4 &339751242
 Transform:
   m_ObjectHideFlags: 0
@@ -1703,6 +1706,8 @@ MonoBehaviour:
   fireball: {fileID: 4862007311518225085, guid: 6fc9c9a06ad7bf94aaf52a108325d872, type: 3}
   iceball: {fileID: 4014795953393301030, guid: f86e6d0e14bbd4d4b891fd2588d9c878, type: 3}
   electricball: {fileID: 2600909964480136427, guid: 323aa6a8a70866f46a29764e1a2cbd1c, type: 3}
+  attackCooldownEnabled: 1
+  attackCooldownDuration: 0.5
 --- !u!60 &1163690606
 PolygonCollider2D:
   m_ObjectHideFlags: 0

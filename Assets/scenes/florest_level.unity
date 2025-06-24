@@ -626,9 +626,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486be55a97a8308468ec42b4647e6f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLayerSprite: {fileID: 8436002030846936574, guid: 211f246664124a21fb2c6d27b30ebb12, type: 3}
-  secondLayerSprite: {fileID: 0}
-  thirdLayerSprite: {fileID: 0}
+  layerSprites:
+  - {fileID: 8436002030846936574, guid: 211f246664124a21fb2c6d27b30ebb12, type: 3}
+  - {fileID: 9205190518206495398, guid: 6069c5a34ec52463ba855604811a3645, type: 3}
+  layerSpeeds:
+  - 0.5
+  - 2
 --- !u!4 &515602067
 Transform:
   m_ObjectHideFlags: 0
@@ -1778,6 +1781,8 @@ MonoBehaviour:
   fireball: {fileID: 4862007311518225085, guid: 6fc9c9a06ad7bf94aaf52a108325d872, type: 3}
   iceball: {fileID: 4014795953393301030, guid: f86e6d0e14bbd4d4b891fd2588d9c878, type: 3}
   electricball: {fileID: 2600909964480136427, guid: 323aa6a8a70866f46a29764e1a2cbd1c, type: 3}
+  attackCooldownEnabled: 0
+  attackCooldownDuration: 0.5
 --- !u!95 &1565299234
 Animator:
   serializedVersion: 7

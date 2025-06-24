@@ -15,7 +15,7 @@ public class BackgroundScript : MonoBehaviour
 
     private void ResetBackground()
     {
-        if (transform.position.x <= (deadZone) * -1)
+        if (transform.position.x <= deadZone * -1)
         {
             transform.position = new Vector3(backgroundResetPlace, transform.position.y, transform.position.z);
         }

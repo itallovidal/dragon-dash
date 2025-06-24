@@ -2,28 +2,44 @@ using UnityEngine;
 
 public class BackgroundSpawnerScript : MonoBehaviour
 {
-    public GameObject firstLayerSprite;
-    public GameObject secondLayerSprite;
-    public GameObject thirdLayerSprite;
-    public GameObject fourthLayerSprite;
-
+    public GameObject[] layerSprites; // sprites dos backgrounds
+    public float[] layerSpeeds;      // velocidades dos sprites
 
     void Start()
     {
-        InstantiateBackground(firstLayerSprite, 0.5f);
+        // Verifica se os sprites foram inseridos
+        if (layerSprites.Length == null)
+        {
+            Debug.LogError("Nenhum sprite foi instanciado como background.");
+            return;
+        }
 
-        if (secondLayerSprite != null) { InstantiateBackground(secondLayerSprite, 2f); }
+        // Verifica se as velocidades foram inseridas
+        if (layerSpeeds.Length == null)
+        {
+            Debug.LogError("Nenhuma velocidade foi definida para os backgrounds.");
+            return;
+        }
 
-        if (thirdLayerSprite != null) { InstantiateBackground(thirdLayerSprite, 0.2f); }
-        if (fourthLayerSprite != null) { InstantiateBackground(fourthLayerSprite, 0.1f); }
+        // Verifica se o número de sprites e velocidades coincide
+        if (layerSprites.Length != layerSpeeds.Length)
+        {
+            Debug.LogError("O número de sprites e velocidades não coincide.");
+            return;
+        }
+
+        for (int i = 0; i < layerSprites.Length; i++)
+        {
+            InstantiateBackground(layerSprites[i], layerSpeeds[i]);
+        }
     }
 
-    // Funcao para criar 2 imagens para o sprite (background) que sera passado por parametro
+    // Instancia o background baseado no prefab passado como parametro
     void InstantiateBackground(GameObject layerSprite, float moveSpeed)
     {
         // Criando a primeira imagem no centro do jogo, baseado na camera
         Vector3 cameraCenterPosition = new Vector3(transform.position.x, transform.position.y);
-        GameObject firstSprite = Instantiate(layerSprite, cameraCenterPosition, transform.rotation);
+        GameObject firstBackgroundInstance = Instantiate(layerSprite, cameraCenterPosition, transform.rotation);
 
         // Pegando metade do tamanho da imagem e o tamanho da camera para achar o posicionamento
         // correto da segunda imagem e do reposicionamento quando as imagens chegam no limite
@@ -32,51 +48,53 @@ public class BackgroundSpawnerScript : MonoBehaviour
 
         Vector3 backgroundResetPlace = new Vector3(cameraWidth + spriteHalfWidth, transform.position.y);
 
-        setResetPlace(firstSprite, backgroundResetPlace.x);
-        setBackgroundMovespeed(firstSprite, moveSpeed);
-        setDeadZone(firstSprite, cameraWidth + spriteHalfWidth);
+        setResetPlace(firstBackgroundInstance, backgroundResetPlace.x);
+        setBackgroundMovespeed(firstBackgroundInstance, moveSpeed);
+        setDeadZone(firstBackgroundInstance, cameraWidth + spriteHalfWidth);
 
         //Criando a segunda imagem
-        GameObject secondSprite = Instantiate(layerSprite, backgroundResetPlace, transform.rotation);
-        setResetPlace(secondSprite, backgroundResetPlace.x);
-        setBackgroundMovespeed(secondSprite, moveSpeed);
-        setDeadZone(secondSprite, cameraWidth + spriteHalfWidth);
-        
+        GameObject secondBackgroundInstance = Instantiate(layerSprite, backgroundResetPlace, transform.rotation);
+        setResetPlace(secondBackgroundInstance, backgroundResetPlace.x);
+        setBackgroundMovespeed(secondBackgroundInstance, moveSpeed);
+        setDeadZone(secondBackgroundInstance, cameraWidth + spriteHalfWidth);
     }
 
-    void setDeadZone(GameObject layerSprite, float deadZone)
+    // Defini a zona de morte para os sprites
+    void setDeadZone(GameObject layerSpriteInstance, float deadZone)
     {
-        BackgroundScript bgScript = layerSprite.GetComponent<BackgroundScript>();
+        BackgroundScript bgScript = layerSpriteInstance.GetComponent<BackgroundScript>();
         if (bgScript == null)
         {
-            Debug.Log("Ops, esqueceu de vincular o fundo!");
+            Debug.LogError("O prefab do background não tem o componente BackgroundScript!");
+            return;
         }
 
         bgScript.deadZone = deadZone;
     }
 
-    void setBackgroundMovespeed(GameObject layerSprite, float speed)
+    // Defini a velocidade de movimento do sprites
+    void setBackgroundMovespeed(GameObject layerSpriteInstance, float speed)
     {
-        BackgroundScript bgScript = layerSprite.GetComponent<BackgroundScript>();
-
+        BackgroundScript bgScript = layerSpriteInstance.GetComponent<BackgroundScript>();
         if (bgScript == null)
         {
-            Debug.Log("Ops, esqueceu de vincular o fundo!");
+            Debug.LogError("O prefab do background não tem o componente BackgroundScript!");
+            return;
         }
 
         bgScript.moveSpeed = speed;
     }
 
-    void setResetPlace(GameObject layerSprite, float backgroundResetPlace)
+    // Defini o ponto de nascimento dos sprites
+    void setResetPlace(GameObject layerSpriteInstance, float backgroundResetPlace)
     {
-        BackgroundScript bgScript = layerSprite.GetComponent<BackgroundScript>();
-
+        BackgroundScript bgScript = layerSpriteInstance.GetComponent<BackgroundScript>();
         if (bgScript == null)
         {
-            Debug.Log("Ops, esqueceu de vincular o fundo!");
+            Debug.LogError("O prefab do background não tem o componente BackgroundScript!");
+            return;
         }
 
         bgScript.backgroundResetPlace = backgroundResetPlace;
     }
-
 }

@@ -280,9 +280,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 486be55a97a8308468ec42b4647e6f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstLayerSprite: {fileID: 843379447845604658, guid: 30f3a85be3f6934498f34489f1440f1d, type: 3}
-  secondLayerSprite: {fileID: 0}
-  thirdLayerSprite: {fileID: 0}
+  layerSprites:
+  - {fileID: 843379447845604658, guid: 30f3a85be3f6934498f34489f1440f1d, type: 3}
+  layerSpeeds:
+  - 0.5
 --- !u!4 &339751242
 Transform:
   m_ObjectHideFlags: 0
