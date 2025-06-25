@@ -30,7 +30,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject electricball;
 
     public bool attackCooldownEnabled = false;
-    public float attackCooldownDuration = 0.5f;
+    public float attackCooldownDuration = 0.4f;
     private float attackCooldownTimer = 0f;
 
     void Start()

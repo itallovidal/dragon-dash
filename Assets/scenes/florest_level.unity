@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pipe: {fileID: 2560626855974916614, guid: 3b1c138542529f64c930f03df3212183, type: 3}
-  spawnRate: 4
+  spawnRate: 5
 --- !u!4 &37382281
 Transform:
   m_ObjectHideFlags: 0

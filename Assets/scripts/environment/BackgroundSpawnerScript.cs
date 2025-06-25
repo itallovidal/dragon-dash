@@ -8,14 +8,14 @@ public class BackgroundSpawnerScript : MonoBehaviour
     void Start()
     {
         // Verifica se os sprites foram inseridos
-        if (layerSprites.Length == null)
+        if (layerSprites.Length == 0)
         {
             Debug.LogError("Nenhum sprite foi instanciado como background.");
             return;
         }
 
         // Verifica se as velocidades foram inseridas
-        if (layerSpeeds.Length == null)
+        if (layerSpeeds.Length == 0)
         {
             Debug.LogError("Nenhuma velocidade foi definida para os backgrounds.");
             return;

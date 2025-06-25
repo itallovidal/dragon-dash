@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421557091237214408}
   - component: {fileID: 1832147608887944573}
-  - component: {fileID: 8283865566128899676}
+  - component: {fileID: 5608083958469784385}
   m_Layer: 0
   m_Name: pipe forest_0
   m_TagString: pipe
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -127039493
   m_SortingLayer: 5
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_Sprite: {fileID: -5102570869053082480, guid: 0852289e14446b19bb0edad0b4632f80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -88,8 +88,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8283865566128899676
-BoxCollider2D:
+--- !u!60 &5608083958469784385
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -122,7 +122,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.118809104, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,8 +132,44 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.4830444, y: 17.14}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.8899999, y: -8.139999}
+      - {x: 2.8899999, y: -6.98}
+      - {x: 2.47, y: -6.5499997}
+      - {x: 1.79, y: -5.87}
+      - {x: 1.5699999, y: -5.92}
+      - {x: 1.77, y: 1.26}
+      - {x: 1.79, y: 1.28}
+      - {x: 1.79, y: 7.5899997}
+      - {x: 1.61, y: 7.8399997}
+      - {x: 0.90999997, y: 8.55}
+      - {x: 0.44, y: 8.57}
+      - {x: -0.45, y: 8.57}
+      - {x: -0.88, y: 8.5}
+      - {x: -0.9, y: 8.48}
+      - {x: -1.11, y: 8.3}
+      - {x: -1.36, y: 8.04}
+      - {x: -1.56, y: 7.81}
+      - {x: -1.76, y: -5.24}
+      - {x: -1.78, y: -5.2599998}
+      - {x: -2.01, y: -6.1099997}
+      - {x: -2.69, y: -6.7799997}
+      - {x: -2.8899999, y: -7.02}
+      - {x: -2.8899999, y: -8.16}
+      - {x: -2.87, y: -8.17}
+      - {x: -2.1599998, y: -8.139999}
+      - {x: -2.19, y: -7.9199996}
+      - {x: -1.55, y: -8.37}
+      - {x: -0.39999998, y: -8.36}
+      - {x: -0.04, y: -8.13}
+      - {x: 0.17999999, y: -8.36}
+      - {x: 0.41, y: -8.57}
+      - {x: 1.5699999, y: -8.57}
+      - {x: 2.2, y: -7.9199996}
+      - {x: 2.2, y: -8.11}
+      - {x: 2.21, y: -8.17}
+  m_UseDelaunayMesh: 0
 --- !u!1 &2560626855974916614
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,7 +386,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -127039493
   m_SortingLayer: 5
-  m_SortingOrder: 11
+  m_SortingOrder: 10
   m_Sprite: {fileID: 3945431292944461864, guid: 6ed0224727ab3aa20a6aef75bc3f1ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -510,7 +546,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4068368429135542908}
   - component: {fileID: 151525142195364690}
-  - component: {fileID: 8504028860561096663}
+  - component: {fileID: 6630629422649127129}
   m_Layer: 0
   m_Name: pipe forest_0 (1)
   m_TagString: pipe
@@ -576,7 +612,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -127039493
   m_SortingLayer: 5
-  m_SortingOrder: 10
+  m_SortingOrder: 9
   m_Sprite: {fileID: -5102570869053082480, guid: 0852289e14446b19bb0edad0b4632f80, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -588,8 +624,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &8504028860561096663
-BoxCollider2D:
+--- !u!60 &6630629422649127129
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -622,7 +658,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.10748172, y: 0}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -632,5 +668,41 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 3.5, y: 17.14}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.8899999, y: -8.139999}
+      - {x: 2.8899999, y: -6.98}
+      - {x: 2.47, y: -6.5499997}
+      - {x: 1.79, y: -5.87}
+      - {x: 1.5699999, y: -5.92}
+      - {x: 1.77, y: 1.26}
+      - {x: 1.79, y: 1.28}
+      - {x: 1.79, y: 7.5899997}
+      - {x: 1.61, y: 7.8399997}
+      - {x: 0.90999997, y: 8.55}
+      - {x: 0.44, y: 8.57}
+      - {x: -0.45, y: 8.57}
+      - {x: -0.88, y: 8.5}
+      - {x: -0.9, y: 8.48}
+      - {x: -1.11, y: 8.3}
+      - {x: -1.36, y: 8.04}
+      - {x: -1.56, y: 7.81}
+      - {x: -1.76, y: -5.24}
+      - {x: -1.78, y: -5.2599998}
+      - {x: -2.01, y: -6.1099997}
+      - {x: -2.69, y: -6.7799997}
+      - {x: -2.8899999, y: -7.02}
+      - {x: -2.8899999, y: -8.16}
+      - {x: -2.87, y: -8.17}
+      - {x: -2.1599998, y: -8.139999}
+      - {x: -2.19, y: -7.9199996}
+      - {x: -1.55, y: -8.37}
+      - {x: -0.39999998, y: -8.36}
+      - {x: -0.04, y: -8.13}
+      - {x: 0.17999999, y: -8.36}
+      - {x: 0.41, y: -8.57}
+      - {x: 1.5699999, y: -8.57}
+      - {x: 2.2, y: -7.9199996}
+      - {x: 2.2, y: -8.11}
+      - {x: 2.21, y: -8.17}
+  m_UseDelaunayMesh: 0
