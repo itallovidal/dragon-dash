@@ -69,7 +69,19 @@ public class AudioManagerScript : MonoBehaviour
             if (audioSource.clip != clip)
             {
                 audioSource.clip = clip;
-                audioSource.Play();
+                
+                // Só toca se WantMusic for true
+                if (PlayerPrefs.GetString("WantMusic", "true") == "true")
+                {
+                    float volume = currentScene == "MenuScene" ? 1f : 0.2f;
+                    audioSource.volume = volume;
+                    audioSource.Play();
+                }
+                else
+                {
+                    audioSource.volume = 0;
+                    audioSource.Stop();
+                }
             }
         }
     }
@@ -95,13 +107,25 @@ public class AudioManagerScript : MonoBehaviour
                 if (audioSource.clip != clip)
                 {
                     audioSource.clip = clip;
-                    float volume = SceneManager.GetActiveScene().name == "MenuScene" ? 1f : 0.2f;
-                    audioSource.volume = volume;
-                    audioSource.Play();
+                    
+                    // Só toca se WantMusic for true
+                    if (PlayerPrefs.GetString("WantMusic", "true") == "true")
+                    {
+                        float volume = scene.name == "MenuScene" ? 1f : 0.2f;
+                        audioSource.volume = volume;
+                        audioSource.Play();
+                    }
+                    else
+                    {
+                        audioSource.volume = 0;
+                        audioSource.Stop();
+                    }
                 }
-                // Se for a mesma música mas não estiver tocando, inicia
-                else if (!audioSource.isPlaying)
+                // Se for a mesma música mas não estiver tocando, inicia apenas se WantMusic for true
+                else if (!audioSource.isPlaying && PlayerPrefs.GetString("WantMusic", "true") == "true")
                 {
+                    float volume = scene.name == "MenuScene" ? 1f : 0.2f;
+                    audioSource.volume = volume;
                     audioSource.Play();
                 }
             }

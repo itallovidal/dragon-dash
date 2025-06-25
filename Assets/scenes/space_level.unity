@@ -1201,7 +1201,7 @@ MonoBehaviour:
   btnMuteSprites:
   - {fileID: -4817899712704240142, guid: d6bd244e2331ae946809dba2f7d076c3, type: 3}
   - {fileID: 1669546127455181568, guid: 02e01bf34dc5b054e906c5b13d12a2f9, type: 3}
-  buttonMute: {fileID: 0}
+  buttonMute: {fileID: 2021919168}
   levelDescription: {fileID: 0}
   level: []
   levelLoader: {fileID: 574012339}

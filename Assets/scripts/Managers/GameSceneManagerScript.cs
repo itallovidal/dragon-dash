@@ -25,10 +25,17 @@ public class GameSceneManagerScript : MonoBehaviour
 
     private void Awake()
     {
-        audioManager = AudioManagerScript.instance;
+        // Procura o AudioManager na cena atual
+        audioManager = FindFirstObjectByType<AudioManagerScript>();
+        
         if (audioManager == null)
         {
             Debug.LogWarning("AudioManager não encontrado na cena!");
+        }
+        else if (btnMuteSprites != null)
+        {
+            // Inicializa o estado visual do botão baseado no volume atual
+            InitializeMuteButtonState();
         }
     }
 
@@ -77,26 +84,54 @@ public class GameSceneManagerScript : MonoBehaviour
         chosenLevel = elClicked.gameObject.tag;
     }
 
+    private void InitializeMuteButtonState()
+    {
+        if (audioManager != null && audioManager.audioSource != null && buttonMute != null && btnMuteSprites != null && btnMuteSprites.Length >= 2)
+        {
+            if (PlayerPrefs.GetString("WantMusic", "true") == "true" && audioManager.audioSource.volume > 0)
+            {
+                buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[1]; // Som ligado
+            }
+            else if (PlayerPrefs.GetString("WantMusic", "true") == "false" || audioManager.audioSource.volume <= 0)
+            {
+                buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[0]; // Som mutado
+            }
+        }
+    }
+
     public void MuteGame()
     {
         if (audioManager != null && audioManager.audioSource != null)
         {
-            switch (audioManager.audioSource.volume)
+            string currentWantMusic = PlayerPrefs.GetString("WantMusic", "true");
+            
+            if (currentWantMusic == "true")
             {
-                case 0:
-                    float volume = SceneManager.GetActiveScene().name == "MenuScene" ? 1f : 0.2f;
-                    audioManager.audioSource.volume = volume;
-                    buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[1];
-                    // Debug.Log("Áudio ativado com sucesso!");
-                    break;
-                case 1:
-                    audioManager.audioSource.volume = 0;
-                    buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[0];
-                    Debug.Log("Áudio mutado com sucesso!");
-                    break;
+                // Muta o áudio
+                audioManager.audioSource.volume = 0;
+                audioManager.audioSource.Stop();
+                buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[0];
+                PlayerPrefs.SetString("WantMusic", "false");
+                Debug.Log("Áudio mutado com sucesso!");
             }
+            else
+            {
+                // Ativa o áudio com volume apropriado para a cena
+                float volume = SceneManager.GetActiveScene().name == "MenuScene" ? 1f : 0.2f;
+                audioManager.audioSource.volume = volume;
+                audioManager.audioSource.Play();
+                buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[1];
+                PlayerPrefs.SetString("WantMusic", "true");
+                Debug.Log("Áudio ativado com sucesso!");
+            }
+            
+            // Salva as preferências
+            PlayerPrefs.Save();
         }
-
+        else
+        {
+            Debug.LogWarning("AudioManager ou AudioSource não encontrado!");
+        }
     }
 
     public void ExitGame()
