@@ -11,11 +11,11 @@
 
 # Links Rápidos
 
-- [Descrição](#description)
+- [Descrição](#descrição)
 - [Tags](#tags)
-- [Arquivos](#files)
-- [Uso](#usage)
-- [Licença](#license)
+- [Arquivos](#arquivos)
+- [Uso](#uso)
+- [Licença](#licença)
 
 ## Descrição
 
@@ -55,7 +55,7 @@ Nosso jovem dragão voa incansavelmente, sempre buscando, sempre superando os de
 ## Tags
 - Unity
 
-## Files
+## Arquivos
 O projeto está organizado com a seguinte estrutura de diretórios:
 
 ```
