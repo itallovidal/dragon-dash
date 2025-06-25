@@ -140,7 +140,7 @@ game-denis/
 
 #### A partir dos Builds Pré-compilados
 
-- Baixe a versão mais recente do jogo na seção de [Releases](https://github.com/seu-usuario/game-denis/releases) ou use os builds incluídos no repositório.
+- Baixe a versão mais recente do jogo na seção de [Releases](https://github.com/itallovidal/game-denis/releases) ou use os builds incluídos no repositório.
 
 #### Compilando o Projeto
 
@@ -148,7 +148,7 @@ Para desenvolvedores que desejam modificar o jogo:
 
 1. Clone o repositório:
    ```
-   git clone https://github.com/seu-usuario/game-denis.git
+   git clone https://github.com/itallovidal/game-denis.git
    cd game-denis
    ```
 
@@ -172,4 +172,4 @@ O jogo suporta teclado/mouse e gamepad:
 - **ESC**: Pausar o Jogo
 
 ## Licença
-Este projeto está licenciado sob a Licença MIT.
+Este projeto está licenciado sob a Licença [MIT](https://github.com/itallovidal/game-denis/LICENSE.txt).
