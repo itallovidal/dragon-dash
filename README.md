@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="logo.png" alt="Dragon Dash Logo" width="500" style="margin-bottom: 30px;">
+  <img src="Assets/logo.png" alt="Dragon Dash Logo" width="500" style="margin-bottom: 30px;">
   <h1 style="font-size: 32px; border: none; line-height: 0; font-weight: bold">Dragon Dash</h1>
   <p>Um projeto feito na Unity como requisito para a disciplina de Programação de Jogos Digitais</p>
     <div style="margin-bottom: 10px">
@@ -108,10 +108,6 @@ game-denis/
 │   │   └── Examples & Extras/            # Exemplos do TextMesh Pro
 │   │
 │   └── Settings/                         # Configurações e parâmetros do projeto
-│
-├── Build/                                # Executáveis do projeto
-│   ├── Windows/                          # Executável no Windows 
-│   └── Linux/                            # Executável no Linux
 │
 ├── Packages/                             # Gerenciamento de pacotes Unity
 │   ├── manifest.json
