@@ -88,11 +88,11 @@ public class GameSceneManagerScript : MonoBehaviour
     {
         if (audioManager != null && audioManager.audioSource != null && buttonMute != null && btnMuteSprites != null && btnMuteSprites.Length >= 2)
         {
-            if (PlayerPrefs.GetString("WantMusic", "true") == "true" && audioManager.audioSource.volume > 0)
+            if (PlayerPrefs.GetInt("WantMusic", 1) == 1)
             {
                 buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[1]; // Som ligado
             }
-            else if (PlayerPrefs.GetString("WantMusic", "true") == "false" || audioManager.audioSource.volume <= 0)
+            else if (PlayerPrefs.GetInt("WantMusic", 1) == 0)
             {
                 buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[0]; // Som mutado
             }
@@ -103,15 +103,15 @@ public class GameSceneManagerScript : MonoBehaviour
     {
         if (audioManager != null && audioManager.audioSource != null)
         {
-            string currentWantMusic = PlayerPrefs.GetString("WantMusic", "true");
+            int currentWantMusic = PlayerPrefs.GetInt("WantMusic", 1);
             
-            if (currentWantMusic == "true")
+            if (currentWantMusic == 1)
             {
                 // Muta o áudio
                 audioManager.audioSource.volume = 0;
                 audioManager.audioSource.Stop();
                 buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[0];
-                PlayerPrefs.SetString("WantMusic", "false");
+                PlayerPrefs.SetInt("WantMusic", 0);
                 Debug.Log("Áudio mutado com sucesso!");
             }
             else
@@ -121,7 +121,7 @@ public class GameSceneManagerScript : MonoBehaviour
                 audioManager.audioSource.volume = volume;
                 audioManager.audioSource.Play();
                 buttonMute.GetComponent<UnityEngine.UI.Image>().sprite = btnMuteSprites[1];
-                PlayerPrefs.SetString("WantMusic", "true");
+                PlayerPrefs.SetInt("WantMusic", 1);
                 Debug.Log("Áudio ativado com sucesso!");
             }
             

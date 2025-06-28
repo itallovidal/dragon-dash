@@ -71,7 +71,7 @@ public class AudioManagerScript : MonoBehaviour
                 audioSource.clip = clip;
                 
                 // Só toca se WantMusic for true
-                if (PlayerPrefs.GetString("WantMusic", "true") == "true")
+                if (PlayerPrefs.GetInt("WantMusic", 1) == 1)
                 {
                     float volume = currentScene == "MenuScene" ? 1f : 0.2f;
                     audioSource.volume = volume;
@@ -109,7 +109,7 @@ public class AudioManagerScript : MonoBehaviour
                     audioSource.clip = clip;
                     
                     // Só toca se WantMusic for true
-                    if (PlayerPrefs.GetString("WantMusic", "true") == "true")
+                    if (PlayerPrefs.GetInt("WantMusic", 1) == 1)
                     {
                         float volume = scene.name == "MenuScene" ? 1f : 0.2f;
                         audioSource.volume = volume;
@@ -122,7 +122,7 @@ public class AudioManagerScript : MonoBehaviour
                     }
                 }
                 // Se for a mesma música mas não estiver tocando, inicia apenas se WantMusic for true
-                else if (!audioSource.isPlaying && PlayerPrefs.GetString("WantMusic", "true") == "true")
+                else if (!audioSource.isPlaying && PlayerPrefs.GetInt("WantMusic", 1) == 1)
                 {
                     float volume = scene.name == "MenuScene" ? 1f : 0.2f;
                     audioSource.volume = volume;

@@ -111,7 +111,7 @@ public class GameLogic : MonoBehaviour
         if (audioManager != null)
         {
             // Só restaura o volume se WantMusic for true
-            if (PlayerPrefs.GetString("WantMusic", "true") == "true")
+            if (PlayerPrefs.GetInt("WantMusic", 1) == 1)
             {
                 audioManager.audioSource.volume = 0.2f;
                 if (!audioManager.audioSource.isPlaying)
