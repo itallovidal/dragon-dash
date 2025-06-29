@@ -59,7 +59,7 @@ Nosso jovem dragão voa incansavelmente, sempre buscando, sempre superando os de
 O projeto está organizado com a seguinte estrutura de diretórios:
 
 ```
-game-denis/
+dragon-dash/
 ├── Assets/
 │   ├── characters/                       # Personagens e prefabs
 │   │   ├── Enemies/                      # Inimigos (Pássaro, Nuvem, Dragão Metálico)
@@ -136,7 +136,7 @@ game-denis/
 
 #### A partir dos Builds Pré-compilados
 
-- Baixe a versão mais recente do jogo na seção de [Releases](https://github.com/itallovidal/game-denis/releases) ou use os builds incluídos no repositório.
+- Baixe a versão mais recente do jogo na seção de [Releases](https://github.com/itallovidal/dragon-dash/releases) ou use os builds incluídos no repositório.
 
 #### Compilando o Projeto
 
@@ -144,8 +144,8 @@ Para desenvolvedores que desejam modificar o jogo:
 
 1. Clone o repositório:
    ```
-   git clone https://github.com/itallovidal/game-denis.git
-   cd game-denis
+   git clone https://github.com/itallovidal/dragon-dash.git
+   cd dragon-dash
    ```
 
 2. Abra o projeto no Unity (versão 2022.3 LTS ou superior)
@@ -168,4 +168,4 @@ O jogo suporta teclado/mouse e gamepad:
 - **ESC**: Pausar o Jogo
 
 ## Licença
-Este projeto está licenciado sob a Licença [MIT](https://github.com/itallovidal/game-denis/LICENSE.txt).
+Este projeto está licenciado sob a Licença [MIT](https://github.com/itallovidal/dragon-dash/blob/main/LICENSE.txt).
